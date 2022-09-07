@@ -1,1388 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://example.com/page/2/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'en'
-  };
-</script>
-
-  <title>Hexo</title>
-  
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-09-07 09:09:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/23/wp-global-styles-adams-1-4-26/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/23/wp-global-styles-adams-1-4-26/" class="post-title-link" itemprop="url">Custom Styles</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-02-23 18:15:31" itemprop="dateCreated datePublished" datetime="2022-02-23T18:15:31+08:00">2022-02-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-07 01:20:06" itemprop="dateModified" datetime="2022-09-07T01:20:06+08:00">2022-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>{“version”: 2, “isGlobalStylesUserThemeJSON”: true }</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/23/wp-global-styles-adams-1-4-26-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/23/wp-global-styles-adams-1-4-26-1/" class="post-title-link" itemprop="url">Custom Styles</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-02-23 18:15:31" itemprop="dateCreated datePublished" datetime="2022-02-23T18:15:31+08:00">2022-02-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-07 01:26:14" itemprop="dateModified" datetime="2022-09-07T01:26:14+08:00">2022-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>{“version”: 2, “isGlobalStylesUserThemeJSON”: true }</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/27/the-final-exam-of-the-introduction-of-computer-science/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/27/the-final-exam-of-the-introduction-of-computer-science/" class="post-title-link" itemprop="url">The final exam of the introduction of computer science</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-01-27 03:43:18" itemprop="dateCreated datePublished" datetime="2022-01-27T03:43:18+08:00">2022-01-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-07 01:20:06" itemprop="dateModified" datetime="2022-09-07T01:20:06+08:00">2022-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h3><p>1）Please explain why modern computers adopt binary systems? (5 marks)</p>
-<p>2）What`s the difference when storing an integer 1 and a character ’1’? (5 marks)</p>
-<h3 id="Answer"><a href="#Answer" class="headerlink" title="Answer:"></a>Answer:</h3><p>1）Binary numbers are ideal for machines because they require only two digits, which can easily be represented by the on and off states of a switch. When computers became electronic, the binary system was particularly appropriate because an electrical circuit is either on or off.</p>
-<p><a target="_blank" rel="noopener" href="https://www.britannica.com/technology/computer/History-of-computing">https://www.britannica.com/technology/computer/History-of-computing</a></p>
-<p>这是一个技术问题，不是科学问题，原则上什么进制都可以。</p>
-<p>旋钮开关也是开关，只是on&#x2F;off双态开关更容易实现、可靠性更高。还有一点就是，它能表达一切！</p>
-<p>关键是开关电路和逻辑运算之间的联系才导致了现代计算机采用二进制系统。</p>
-<p>题外话：1，据说Knuth有意设计十进制计算机系统；2，据说从信息论角度看e（自然对数的底）进制是信息密度最高的进制。3比2更靠近ee，不知道3态开关如何设计？</p>
-<p>2）整数1和字符1的区别：</p>
-<ul>
-<li>逻辑上是数据类型的不同，即语义解释不同；interger 1 是指整数1的二进制表示，character ’1’ 是指字符 ’1’ 的编码（ascii或任何其他编码方式）的二进制表示。</li>
-<li>物理存储上的区别：存储空间上的区别，整数通常采用16bits或32bits存储，字符通常采用8bits存储。<strong>注意</strong>：这里有通常一词，也就是技术上完全可以采用同样的空间来存储。</li>
-</ul>
-<h3 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h3><p>How to test the equality of two floats in C? (5 marks), and why using ‘&#x3D;&#x3D;’ is not an appropriate approach? (5 marks)</p>
-<h3 id="Answer-1"><a href="#Answer-1" class="headerlink" title="Answer:"></a>Answer:</h3><p>1，C语言中比较两个<code>float</code>相等通常采用<code>fabs(a-b)&lt;1e-7</code>之类的方法，即两个<code>float a</code>和<code>b</code>的差值足够小即认为是相等的。</p>
-<p>2，在C语言中用<code>==</code>比较时，如果两边的表达式的值在计算机中的表示完全一致就表示相等。大家知道浮点数在计算机中的表示不精确，所以，不能用<code>==</code>来作浮点数的相等比较。</p>
-<p><strong>WAIT！WAIT！！WAIT！！！</strong></p>
-<p>如果两个浮点数表达式<code>e1</code>和<code>e2</code>的值是一样的，难道它们在计算机中的表示不一样吗？当然不是啊。同样的值在计算机中的表示，尽管不精确，但必然也是一样的不精确！所以，用<code>==</code>比较没问题。</p>
-<p>那么问题在哪儿呢？问题是，比如<code>e1=(a+b)+c</code>，<code>e2=a+(b+c)</code>，在数学上，<code>e1</code>和<code>e2</code>的<strong>值</strong>是相同的。但是在计算机上，由于计算顺序不同，每一步计算都可能引入误差，导致<code>e1</code>和<code>e2</code>的<strong>值</strong>不同！也就是说，结合律在计算机算术中并不成立！不同的值在计算机中的表示自然也就不同了。此时，如果用<code>==</code>作比较结果当然是不相等了。</p>
-<p>虽然计算机表达不精确，但是在计算意义上有效位数的数值还是正确的。因此，对于不精确的浮点数而言，我们只比较其有效位数。</p>
-<p>还有一个办法：把浮点数乘上106106取整，然后转换成浮点数，再除以106106。这样就可以用<code>==</code>来比较相等了。但是要注意整数的溢出问题！</p>
-<h3 id="Question-3"><a href="#Question-3" class="headerlink" title="Question 3"></a>Question 3</h3><p>Please describe the von Neumann architecture, and what is ALU？</p>
-<h3 id="Answer-2"><a href="#Answer-2" class="headerlink" title="Answer:"></a>Answer:</h3><p>1）The von Neumann architecture — also known as the von Neumann model or Princeton architecture — is a computer architecture based on a 1945 description by John von Neumann and others in the First Draft of a Report on the EDVAC. That <strong>document</strong> describes a design architecture for an electronic digital computer with these components:</p>
-<ul>
-<li>A <strong>processing unit</strong> that contains an arithmetic logic unit and processor registers</li>
-<li>A <strong>control unit</strong> that contains an instruction register and program counter</li>
-<li><strong>Memory</strong> that stores data and instructions, External mass storage</li>
-<li><strong>Input</strong> and <strong>output</strong> mechanisms</li>
-</ul>
-<p>The term “von Neumann architecture” has evolved to mean any stored-program computer in which an instruction fetch and a data operation cannot occur at the same time because they share a common bus. This is referred to as the von Neumann bottleneck, and often limits the performance of the system.</p>
-<p>其实，只是说出上述5大部件并不是对体系结构的描述！体系结构是指部件的划分以及这些部件之间的相互关系，包括连接和信息或控制流向，也就是说它的工作原理或者工作流程。至少得说出CPU中运行程序的三个阶段：取指令、指令解码、执行指令，的大致工作原理。<strong>注意</strong>，上面蓝色文字，整个<strong>document</strong>才描述了那个体系结构！</p>
-<p>2）ALU stands for Arithmetic Logic Unit. 算术逻辑单元，做算术运算和逻辑运算的。</p>
-<h3 id="Question-4"><a href="#Question-4" class="headerlink" title="Question 4"></a>Question 4</h3><p>a) please design a new repetition structure that has the same function with the following code, while continue statement is not allowed. (5 marks)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for (i=0; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    if(i%2==0) continue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>b) Keep the while structure and eliminate the break statement. (5 marks)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">while (a)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    if (b)</span><br><span class="line">        break;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<h3 id="Answer-3"><a href="#Answer-3" class="headerlink" title="Answer:"></a>Answer:</h3><p>a）参考本站帖子，<code>continue</code>的意思是跳过下面的语句立刻进入下一轮循环。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (i = 0; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    if (i % 2 == 0) continue;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>消去<code>continue</code>，可以采用下面的代码结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">for (i = 0; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    if (i % 2 != 0)</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>看清楚了，这里<code>if...continue</code>下面是有别的代码的。如果下面没有别的代码，如本题题面所描述的，直接删除<code>if...continue</code>语句即可。</p>
-<p>另外，注意：如果把<code>for</code>中的终止条件改为<code>i &lt; n &amp;&amp; i % 2 != 0</code>是错误的，因为这样的话，<code>i</code>为奇数时就马上终止<code>for</code>循环了。还有，也不能用<code>i=i+2</code>来代替<code>i++</code>，因为循环体的前半部分需要对每个i循环。</p>
-<p>下面的做法当然也没错：只是这不是结构化程序设计的初衷。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (i = 0; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    if (i % 2 == 0) goto label;</span><br><span class="line">    ...</span><br><span class="line">label:  ;        // empty statement</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>b）参考本站帖子，<code>break</code>的意思是立刻终止并跳出循环。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">while (a)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    if (b) </span><br><span class="line">        break;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>消去<code>break</code>，可以采用下面的代码结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">while (a &amp;&amp; !b)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    if (!b) </span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注意，这里<code>if</code>语句下面还有别的语句。如果没有别的语句，则可以删除<code>if</code>语句，只需要保留<code>while</code>中的条件即可。当然也可以用<code>goto</code>跳出循环。只是这不是结构化程序设计的初衷。 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">while (a)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    if (b) </span><br><span class="line">        goto label;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">label: </span><br></pre></td></tr></table></figure>
-
-<p>有同学采用do…while结构，这和消去break无关。</p>
-<h3 id="Question-5"><a href="#Question-5" class="headerlink" title="Question 5"></a>Question 5</h3><p>Write a program in C to print Fibonacci Series using recursion (5 marks) and repetition (5 marks) respectively.</p>
-<p>Fibonacci(n)&#x3D;\left\{\begin{array}{ll}n &amp; \text { if } n&#x3D;0,1 \\ \text { fibonacci }(n-1)+\text { fibanacci }(n-2) &amp; \text { if } n \geqslant 2\end{array}\right.</p>
-<h3 id="Answer-4"><a href="#Answer-4" class="headerlink" title="Answer:"></a>Answer:</h3><p>打印Fibonacci Series？打印多少项？数列是无限的呀！还用递归打印？前面的项还不能为后面的项所利用！纯粹指数爆炸式的计算量啊，这得多奢侈啊！上课时特别提过，递归方式并不适合计算Fibonacci数，这还只是计算一个数哦，别说是整个数列了！</p>
-<p>好吧，就当作练习吧。</p>
-<p>还有，这个题目必须要给出需要打印的项数，否则只打印前2项或者前5项行不行？</p>
-<p>另外，计算Fibonacci Series时，<code>int</code>类型很快会溢出。所以，最大项应该有所限制。可以计算到第<code>n = 46</code>项，接下来就会溢出了。大家可以run一下代码，看看是否越来越慢？</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int fib(int i);</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int f0 = 0,f1 = 1;</span><br><span class="line">    int f2;</span><br><span class="line">    int i, n;</span><br><span class="line">    scanf(&quot;%d&quot;, &amp;n);</span><br><span class="line"></span><br><span class="line">    // print Fibonacci Series iteratively</span><br><span class="line">    if (n &gt;= 0)</span><br><span class="line">        printf(&quot;%d\n&quot;, f0);</span><br><span class="line">    if (n &gt;= 1)</span><br><span class="line">        printf(&quot;%d\n&quot;, f1);</span><br><span class="line">    for (i = 2; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        f2 = f0 + f1;</span><br><span class="line">        printf(&quot;%d\n&quot;, f2);</span><br><span class="line">        f0 = f1;</span><br><span class="line">        f1 = f2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // print Fibonacci Series recursively</span><br><span class="line">    for (i = 0; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;%d\n&quot;, fib(i));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int fib(int i)</span><br><span class="line">&#123;</span><br><span class="line">    if (i &lt; 2)</span><br><span class="line">        return i;</span><br><span class="line">    else</span><br><span class="line">        return fib(i - 1) + fib(i - 2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Question-6"><a href="#Question-6" class="headerlink" title="Question 6"></a>Question 6</h3><p>Write a program in C to print all unique elements in one dimensional array.</p>
-<h3 id="Answer-5"><a href="#Answer-5" class="headerlink" title="Answer:"></a>Answer:</h3><p>这题要求在一位数组中找出并打印那些唯一的元素。题面没说输入如何处理，那就随你。循规蹈矩的做法是用一个循环输入数据，一个循环输出数据，其中需要嵌套一个循环，以判断该元素是否在别处也出现过。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#define SIZE 100</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int arr[SIZE];</span><br><span class="line">    int i, j;</span><br><span class="line">    int count;</span><br><span class="line">    for (i = 0; i &lt; SIZE; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        scanf(&quot;%d&quot;, &amp;arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    for (i = 0; i &lt; SIZE; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        count = 0;      // number of occurrences of arr[i]</span><br><span class="line">        for (j = 0; count &lt; 2 &amp;&amp; j &lt; SIZE; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (arr[i] == arr[j])</span><br><span class="line">                count++;</span><br><span class="line">        &#125;</span><br><span class="line">        if (count &lt; 2)  // appears only once</span><br><span class="line">            printf(&quot;%d\n&quot;, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>由于题面没规定输入数据，你完全可以自行设定数据。</p>
-<ul>
-<li>全部初始化为00，则不用输出了。</li>
-<li>初始化为0～n−10～n−1，则全部输出。</li>
-</ul>
-<p>虽说这样不好，但也没错，和题目不矛盾。 </p>
-<p>还有同学拿数据作下标用，类似基数排序。但是，数据可能很大，还可能有负数。这种做法在程序设计中肯定不可取。</p>
-<h3 id="Question-7"><a href="#Question-7" class="headerlink" title="Question 7"></a>Question 7</h3><p>Through investigation, the police determined that the murderer must be one of the four suspects. The following are the confessions of the four suspects: A said: not me. B said: it’s C. C said: it’s D. D said: C is lying! It is known that three people told the truth and one told a lie. Now, based on this information, please write a LOOP program to determine who is the murderer.</p>
-<h3 id="Answer-6"><a href="#Answer-6" class="headerlink" title="Answer:"></a>Answer:</h3><p>这个题目似乎见过。不过，那是为了写逻辑表达式。</p>
-<p>题面描述是一个智力谜题，给定这样的条件，答案就是唯一的，只有一个答案，且永远不会变！</p>
-<p>你经过推理分析，得出结论。这本身就是算法过程。所以，你写出<code>“答案是C”</code>就是最简答的算法，你写一个程序直接<code>printf(&quot;C&quot;);</code>就是最简单的程序，当然也应该算是对的！</p>
-<p>好了，如果一定要在程序中判断求解，我们先得建立模型。你可以根据自己的理解来建立模型，可以简单可以复杂。</p>
-<p>这里我们用字符<code>&#39;A&#39;,</code> <code>&#39;B&#39;</code>, <code>&#39;C&#39;</code>,和<code>&#39;D&#39;</code>来分别表示4个嫌疑人。用字符变量s来遍历所有可能性，对于<code>s</code>的每一种可能，再根据四个嫌疑人的说辞进行真伪判断。比如，A said: not me。在模型中就是 <code>s != &#39;A&#39;</code>。</p>
-<ul>
-<li><code>A said: not me. ---&gt; s != &#39;A&#39;</code></li>
-<li><code>B said: it&#39;s C.    ---&gt; s == &#39;C&#39;</code></li>
-<li><code>C said: it&#39;s D.    ---&gt; s == &#39;D&#39;</code></li>
-<li><code>D said: C is lying! ---&gt; s != &#39;D&#39;</code></li>
-</ul>
-<p>题目条件告知有三句真话一句假话。也就是说模型中的解满足：四句话的真值加起来应该等于3。即</p>
-<ul>
-<li><code>((s != &#39;A&#39;) + (s == &#39;C&#39;) + (s == &#39;D&#39;) + (s != &#39;D&#39;)) == 3</code></li>
-</ul>
-<p>因此，一个常规的代码看上去是这样的：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    char s;</span><br><span class="line">    for (s = &#x27;A&#x27;; s &lt;= &#x27;D&#x27;; s++)</span><br><span class="line">    &#123;</span><br><span class="line">        if (((s != &#x27;A&#x27;) + (s == &#x27;C&#x27;) + (s == &#x27;D&#x27;) + (s != &#x27;D&#x27;)) == 3)</span><br><span class="line">            printf(&quot;The murder is %c.\n&quot;, s);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其实，这样的题目适合只写逻辑表达式。</p>
-<h3 id="Question-8"><a href="#Question-8" class="headerlink" title="Question 8"></a>Question 8</h3><p>Suppose in a test there are totally 4 questions that need to be answered, full mark of each question is 25. The minimum passing score of this test is 60. You need to design a structure to store this test result for each candidate (6 marks), find who failed to pass the test (7 marks), and print the result in descending order (7 marks).<br>Input:<br>4<br>CS004 3 15 21 13<br>CS003 5 14 21 23 <br>CS002 22 1 2 0 <br>CS001 12 22 13 15<br>Among them, the first column gives the number of candidates. The next following column give a candidate’s admission ticket number and the corresponding marks from question 1 to 4.<br>Output requirements:<br>Print the number of candidates who failed to pass this test in the first line, and display the results (including ticket number and test score) in a descending order according their test scores.<br>Output:<br>2<br>CS004 52<br>CS002 25</p>
-<h3 id="Answer-7"><a href="#Answer-7" class="headerlink" title="Answer:"></a>Answer:</h3><p>这个题目没啥意思，没啥可说的。需要注意的是：</p>
-<ul>
-<li>1，设计结构体</li>
-<li>2，输入输出，随便。</li>
-<li>3，挑选出总分低于60的。</li>
-<li>4，按降序打印，只打印那些低于60分的。</li>
-</ul>
-<p>代码如下，相信大家都能看明白的。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#define MAX 100</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">    char ticket[10];</span><br><span class="line">    int c1, c2, c3, c4;</span><br><span class="line">    int score;</span><br><span class="line">&#125; TEST;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    TEST stu[MAX];</span><br><span class="line">    int orderd[MAX];</span><br><span class="line">    int i, pass, failed, n;</span><br><span class="line">    // input total number of candidates, n &lt;= MAX</span><br><span class="line">    scanf(&quot;%d&quot;, &amp;n);</span><br><span class="line">    // input all data，and count how many failed</span><br><span class="line">    failed = 0;</span><br><span class="line">    for (i = 0; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        scanf(&quot;%s&quot;, stu[i].ticket);</span><br><span class="line">        scanf(&quot;%d%d%d%d&quot;, &amp;stu[i].c1, &amp;stu[i].c2, &amp;stu[i].c3, &amp;stu[i].c4);</span><br><span class="line">        stu[i].score = stu[i].c1 + stu[i].c2 + stu[i].c3 + stu[i].c4;</span><br><span class="line">        if (stu[i].score &lt; 60)</span><br><span class="line">            failed++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // initialize order array</span><br><span class="line">    for (i = 0; i &lt; n; i++)</span><br><span class="line">        orderd[i] = i;</span><br><span class="line"></span><br><span class="line">    // sort stu array according to score decreasingly</span><br><span class="line">    for (pass = 0; pass &lt; n - 1; pass++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (i = 0; i &lt; n - pass - 1; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (stu[orderd[i]].score &lt; stu[orderd[i + 1]].score)</span><br><span class="line">            &#123;</span><br><span class="line">                int temp;</span><br><span class="line">                temp = orderd[i];</span><br><span class="line">                orderd[i] = orderd[i + 1];</span><br><span class="line">                orderd[i + 1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // print out result</span><br><span class="line">    printf(&quot;%d\n&quot;, failed);</span><br><span class="line">    for (i = n - failed; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;%s %d\n&quot;, stu[orderd[i]].ticket, stu[orderd[i]].score);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/01/27/the-final-exam-of-the-introduction-of-computer-science-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/01/27/the-final-exam-of-the-introduction-of-computer-science-1/" class="post-title-link" itemprop="url">The final exam of the introduction of computer science</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-01-27 03:43:18" itemprop="dateCreated datePublished" datetime="2022-01-27T03:43:18+08:00">2022-01-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-07 01:26:14" itemprop="dateModified" datetime="2022-09-07T01:26:14+08:00">2022-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h3><p>1）Please explain why modern computers adopt binary systems? (5 marks)</p>
-<p>2）What`s the difference when storing an integer 1 and a character ’1’? (5 marks)</p>
-<h3 id="Answer"><a href="#Answer" class="headerlink" title="Answer:"></a>Answer:</h3><p>1）Binary numbers are ideal for machines because they require only two digits, which can easily be represented by the on and off states of a switch. When computers became electronic, the binary system was particularly appropriate because an electrical circuit is either on or off.</p>
-<p><a target="_blank" rel="noopener" href="https://www.britannica.com/technology/computer/History-of-computing">https://www.britannica.com/technology/computer/History-of-computing</a></p>
-<p>这是一个技术问题，不是科学问题，原则上什么进制都可以。</p>
-<p>旋钮开关也是开关，只是on&#x2F;off双态开关更容易实现、可靠性更高。还有一点就是，它能表达一切！</p>
-<p>关键是开关电路和逻辑运算之间的联系才导致了现代计算机采用二进制系统。</p>
-<p>题外话：1，据说Knuth有意设计十进制计算机系统；2，据说从信息论角度看e（自然对数的底）进制是信息密度最高的进制。3比2更靠近ee，不知道3态开关如何设计？</p>
-<p>2）整数1和字符1的区别：</p>
-<ul>
-<li>逻辑上是数据类型的不同，即语义解释不同；interger 1 是指整数1的二进制表示，character ’1’ 是指字符 ’1’ 的编码（ascii或任何其他编码方式）的二进制表示。</li>
-<li>物理存储上的区别：存储空间上的区别，整数通常采用16bits或32bits存储，字符通常采用8bits存储。<strong>注意</strong>：这里有通常一词，也就是技术上完全可以采用同样的空间来存储。</li>
-</ul>
-<h3 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h3><p>How to test the equality of two floats in C? (5 marks), and why using ‘&#x3D;&#x3D;’ is not an appropriate approach? (5 marks)</p>
-<h3 id="Answer-1"><a href="#Answer-1" class="headerlink" title="Answer:"></a>Answer:</h3><p>1，C语言中比较两个<code>float</code>相等通常采用<code>fabs(a-b)&lt;1e-7</code>之类的方法，即两个<code>float a</code>和<code>b</code>的差值足够小即认为是相等的。</p>
-<p>2，在C语言中用<code>==</code>比较时，如果两边的表达式的值在计算机中的表示完全一致就表示相等。大家知道浮点数在计算机中的表示不精确，所以，不能用<code>==</code>来作浮点数的相等比较。</p>
-<p><strong>WAIT！WAIT！！WAIT！！！</strong></p>
-<p>如果两个浮点数表达式<code>e1</code>和<code>e2</code>的值是一样的，难道它们在计算机中的表示不一样吗？当然不是啊。同样的值在计算机中的表示，尽管不精确，但必然也是一样的不精确！所以，用<code>==</code>比较没问题。</p>
-<p>那么问题在哪儿呢？问题是，比如<code>e1=(a+b)+c</code>，<code>e2=a+(b+c)</code>，在数学上，<code>e1</code>和<code>e2</code>的<strong>值</strong>是相同的。但是在计算机上，由于计算顺序不同，每一步计算都可能引入误差，导致<code>e1</code>和<code>e2</code>的<strong>值</strong>不同！也就是说，结合律在计算机算术中并不成立！不同的值在计算机中的表示自然也就不同了。此时，如果用<code>==</code>作比较结果当然是不相等了。</p>
-<p>虽然计算机表达不精确，但是在计算意义上有效位数的数值还是正确的。因此，对于不精确的浮点数而言，我们只比较其有效位数。</p>
-<p>还有一个办法：把浮点数乘上106106取整，然后转换成浮点数，再除以106106。这样就可以用<code>==</code>来比较相等了。但是要注意整数的溢出问题！</p>
-<h3 id="Question-3"><a href="#Question-3" class="headerlink" title="Question 3"></a>Question 3</h3><p>Please describe the von Neumann architecture, and what is ALU？</p>
-<h3 id="Answer-2"><a href="#Answer-2" class="headerlink" title="Answer:"></a>Answer:</h3><p>1）The von Neumann architecture — also known as the von Neumann model or Princeton architecture — is a computer architecture based on a 1945 description by John von Neumann and others in the First Draft of a Report on the EDVAC. That <strong>document</strong> describes a design architecture for an electronic digital computer with these components:</p>
-<ul>
-<li>A <strong>processing unit</strong> that contains an arithmetic logic unit and processor registers</li>
-<li>A <strong>control unit</strong> that contains an instruction register and program counter</li>
-<li><strong>Memory</strong> that stores data and instructions, External mass storage</li>
-<li><strong>Input</strong> and <strong>output</strong> mechanisms</li>
-</ul>
-<p>The term “von Neumann architecture” has evolved to mean any stored-program computer in which an instruction fetch and a data operation cannot occur at the same time because they share a common bus. This is referred to as the von Neumann bottleneck, and often limits the performance of the system.</p>
-<p>其实，只是说出上述5大部件并不是对体系结构的描述！体系结构是指部件的划分以及这些部件之间的相互关系，包括连接和信息或控制流向，也就是说它的工作原理或者工作流程。至少得说出CPU中运行程序的三个阶段：取指令、指令解码、执行指令，的大致工作原理。<strong>注意</strong>，上面蓝色文字，整个<strong>document</strong>才描述了那个体系结构！</p>
-<p>2）ALU stands for Arithmetic Logic Unit. 算术逻辑单元，做算术运算和逻辑运算的。</p>
-<h3 id="Question-4"><a href="#Question-4" class="headerlink" title="Question 4"></a>Question 4</h3><p>a) please design a new repetition structure that has the same function with the following code, while continue statement is not allowed. (5 marks)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for (i=0; i&lt;n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    if(i%2==0) continue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>b) Keep the while structure and eliminate the break statement. (5 marks)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">while (a)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    if (b)</span><br><span class="line">        break;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<h3 id="Answer-3"><a href="#Answer-3" class="headerlink" title="Answer:"></a>Answer:</h3><p>a）参考本站帖子，<code>continue</code>的意思是跳过下面的语句立刻进入下一轮循环。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (i = 0; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    if (i % 2 == 0) continue;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>消去<code>continue</code>，可以采用下面的代码结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">for (i = 0; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    if (i % 2 != 0)</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>看清楚了，这里<code>if...continue</code>下面是有别的代码的。如果下面没有别的代码，如本题题面所描述的，直接删除<code>if...continue</code>语句即可。</p>
-<p>另外，注意：如果把<code>for</code>中的终止条件改为<code>i &lt; n &amp;&amp; i % 2 != 0</code>是错误的，因为这样的话，<code>i</code>为奇数时就马上终止<code>for</code>循环了。还有，也不能用<code>i=i+2</code>来代替<code>i++</code>，因为循环体的前半部分需要对每个i循环。</p>
-<p>下面的做法当然也没错：只是这不是结构化程序设计的初衷。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (i = 0; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    if (i % 2 == 0) goto label;</span><br><span class="line">    ...</span><br><span class="line">label:  ;        // empty statement</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>b）参考本站帖子，<code>break</code>的意思是立刻终止并跳出循环。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">while (a)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    if (b) </span><br><span class="line">        break;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>消去<code>break</code>，可以采用下面的代码结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">while (a &amp;&amp; !b)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    if (!b) </span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注意，这里<code>if</code>语句下面还有别的语句。如果没有别的语句，则可以删除<code>if</code>语句，只需要保留<code>while</code>中的条件即可。当然也可以用<code>goto</code>跳出循环。只是这不是结构化程序设计的初衷。 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">while (a)</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    if (b) </span><br><span class="line">        goto label;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">label: </span><br></pre></td></tr></table></figure>
-
-<p>有同学采用do…while结构，这和消去break无关。</p>
-<h3 id="Question-5"><a href="#Question-5" class="headerlink" title="Question 5"></a>Question 5</h3><p>Write a program in C to print Fibonacci Series using recursion (5 marks) and repetition (5 marks) respectively.</p>
-<p>Fibonacci(n)&#x3D;\left\{\begin{array}{ll}n &amp; \text { if } n&#x3D;0,1 \\ \text { fibonacci }(n-1)+\text { fibanacci }(n-2) &amp; \text { if } n \geqslant 2\end{array}\right.</p>
-<h3 id="Answer-4"><a href="#Answer-4" class="headerlink" title="Answer:"></a>Answer:</h3><p>打印Fibonacci Series？打印多少项？数列是无限的呀！还用递归打印？前面的项还不能为后面的项所利用！纯粹指数爆炸式的计算量啊，这得多奢侈啊！上课时特别提过，递归方式并不适合计算Fibonacci数，这还只是计算一个数哦，别说是整个数列了！</p>
-<p>好吧，就当作练习吧。</p>
-<p>还有，这个题目必须要给出需要打印的项数，否则只打印前2项或者前5项行不行？</p>
-<p>另外，计算Fibonacci Series时，<code>int</code>类型很快会溢出。所以，最大项应该有所限制。可以计算到第<code>n = 46</code>项，接下来就会溢出了。大家可以run一下代码，看看是否越来越慢？</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int fib(int i);</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int f0 = 0,f1 = 1;</span><br><span class="line">    int f2;</span><br><span class="line">    int i, n;</span><br><span class="line">    scanf(&quot;%d&quot;, &amp;n);</span><br><span class="line"></span><br><span class="line">    // print Fibonacci Series iteratively</span><br><span class="line">    if (n &gt;= 0)</span><br><span class="line">        printf(&quot;%d\n&quot;, f0);</span><br><span class="line">    if (n &gt;= 1)</span><br><span class="line">        printf(&quot;%d\n&quot;, f1);</span><br><span class="line">    for (i = 2; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        f2 = f0 + f1;</span><br><span class="line">        printf(&quot;%d\n&quot;, f2);</span><br><span class="line">        f0 = f1;</span><br><span class="line">        f1 = f2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // print Fibonacci Series recursively</span><br><span class="line">    for (i = 0; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;%d\n&quot;, fib(i));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int fib(int i)</span><br><span class="line">&#123;</span><br><span class="line">    if (i &lt; 2)</span><br><span class="line">        return i;</span><br><span class="line">    else</span><br><span class="line">        return fib(i - 1) + fib(i - 2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Question-6"><a href="#Question-6" class="headerlink" title="Question 6"></a>Question 6</h3><p>Write a program in C to print all unique elements in one dimensional array.</p>
-<h3 id="Answer-5"><a href="#Answer-5" class="headerlink" title="Answer:"></a>Answer:</h3><p>这题要求在一位数组中找出并打印那些唯一的元素。题面没说输入如何处理，那就随你。循规蹈矩的做法是用一个循环输入数据，一个循环输出数据，其中需要嵌套一个循环，以判断该元素是否在别处也出现过。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#define SIZE 100</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int arr[SIZE];</span><br><span class="line">    int i, j;</span><br><span class="line">    int count;</span><br><span class="line">    for (i = 0; i &lt; SIZE; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        scanf(&quot;%d&quot;, &amp;arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    for (i = 0; i &lt; SIZE; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        count = 0;      // number of occurrences of arr[i]</span><br><span class="line">        for (j = 0; count &lt; 2 &amp;&amp; j &lt; SIZE; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (arr[i] == arr[j])</span><br><span class="line">                count++;</span><br><span class="line">        &#125;</span><br><span class="line">        if (count &lt; 2)  // appears only once</span><br><span class="line">            printf(&quot;%d\n&quot;, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>由于题面没规定输入数据，你完全可以自行设定数据。</p>
-<ul>
-<li>全部初始化为00，则不用输出了。</li>
-<li>初始化为0～n−10～n−1，则全部输出。</li>
-</ul>
-<p>虽说这样不好，但也没错，和题目不矛盾。 </p>
-<p>还有同学拿数据作下标用，类似基数排序。但是，数据可能很大，还可能有负数。这种做法在程序设计中肯定不可取。</p>
-<h3 id="Question-7"><a href="#Question-7" class="headerlink" title="Question 7"></a>Question 7</h3><p>Through investigation, the police determined that the murderer must be one of the four suspects. The following are the confessions of the four suspects: A said: not me. B said: it’s C. C said: it’s D. D said: C is lying! It is known that three people told the truth and one told a lie. Now, based on this information, please write a LOOP program to determine who is the murderer.</p>
-<h3 id="Answer-6"><a href="#Answer-6" class="headerlink" title="Answer:"></a>Answer:</h3><p>这个题目似乎见过。不过，那是为了写逻辑表达式。</p>
-<p>题面描述是一个智力谜题，给定这样的条件，答案就是唯一的，只有一个答案，且永远不会变！</p>
-<p>你经过推理分析，得出结论。这本身就是算法过程。所以，你写出<code>“答案是C”</code>就是最简答的算法，你写一个程序直接<code>printf(&quot;C&quot;);</code>就是最简单的程序，当然也应该算是对的！</p>
-<p>好了，如果一定要在程序中判断求解，我们先得建立模型。你可以根据自己的理解来建立模型，可以简单可以复杂。</p>
-<p>这里我们用字符<code>&#39;A&#39;,</code> <code>&#39;B&#39;</code>, <code>&#39;C&#39;</code>,和<code>&#39;D&#39;</code>来分别表示4个嫌疑人。用字符变量s来遍历所有可能性，对于<code>s</code>的每一种可能，再根据四个嫌疑人的说辞进行真伪判断。比如，A said: not me。在模型中就是 <code>s != &#39;A&#39;</code>。</p>
-<ul>
-<li><code>A said: not me. ---&gt; s != &#39;A&#39;</code></li>
-<li><code>B said: it&#39;s C.    ---&gt; s == &#39;C&#39;</code></li>
-<li><code>C said: it&#39;s D.    ---&gt; s == &#39;D&#39;</code></li>
-<li><code>D said: C is lying! ---&gt; s != &#39;D&#39;</code></li>
-</ul>
-<p>题目条件告知有三句真话一句假话。也就是说模型中的解满足：四句话的真值加起来应该等于3。即</p>
-<ul>
-<li><code>((s != &#39;A&#39;) + (s == &#39;C&#39;) + (s == &#39;D&#39;) + (s != &#39;D&#39;)) == 3</code></li>
-</ul>
-<p>因此，一个常规的代码看上去是这样的：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    char s;</span><br><span class="line">    for (s = &#x27;A&#x27;; s &lt;= &#x27;D&#x27;; s++)</span><br><span class="line">    &#123;</span><br><span class="line">        if (((s != &#x27;A&#x27;) + (s == &#x27;C&#x27;) + (s == &#x27;D&#x27;) + (s != &#x27;D&#x27;)) == 3)</span><br><span class="line">            printf(&quot;The murder is %c.\n&quot;, s);</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其实，这样的题目适合只写逻辑表达式。</p>
-<h3 id="Question-8"><a href="#Question-8" class="headerlink" title="Question 8"></a>Question 8</h3><p>Suppose in a test there are totally 4 questions that need to be answered, full mark of each question is 25. The minimum passing score of this test is 60. You need to design a structure to store this test result for each candidate (6 marks), find who failed to pass the test (7 marks), and print the result in descending order (7 marks).<br>Input:<br>4<br>CS004 3 15 21 13<br>CS003 5 14 21 23 <br>CS002 22 1 2 0 <br>CS001 12 22 13 15<br>Among them, the first column gives the number of candidates. The next following column give a candidate’s admission ticket number and the corresponding marks from question 1 to 4.<br>Output requirements:<br>Print the number of candidates who failed to pass this test in the first line, and display the results (including ticket number and test score) in a descending order according their test scores.<br>Output:<br>2<br>CS004 52<br>CS002 25</p>
-<h3 id="Answer-7"><a href="#Answer-7" class="headerlink" title="Answer:"></a>Answer:</h3><p>这个题目没啥意思，没啥可说的。需要注意的是：</p>
-<ul>
-<li>1，设计结构体</li>
-<li>2，输入输出，随便。</li>
-<li>3，挑选出总分低于60的。</li>
-<li>4，按降序打印，只打印那些低于60分的。</li>
-</ul>
-<p>代码如下，相信大家都能看明白的。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#define MAX 100</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">    char ticket[10];</span><br><span class="line">    int c1, c2, c3, c4;</span><br><span class="line">    int score;</span><br><span class="line">&#125; TEST;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    TEST stu[MAX];</span><br><span class="line">    int orderd[MAX];</span><br><span class="line">    int i, pass, failed, n;</span><br><span class="line">    // input total number of candidates, n &lt;= MAX</span><br><span class="line">    scanf(&quot;%d&quot;, &amp;n);</span><br><span class="line">    // input all data，and count how many failed</span><br><span class="line">    failed = 0;</span><br><span class="line">    for (i = 0; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        scanf(&quot;%s&quot;, stu[i].ticket);</span><br><span class="line">        scanf(&quot;%d%d%d%d&quot;, &amp;stu[i].c1, &amp;stu[i].c2, &amp;stu[i].c3, &amp;stu[i].c4);</span><br><span class="line">        stu[i].score = stu[i].c1 + stu[i].c2 + stu[i].c3 + stu[i].c4;</span><br><span class="line">        if (stu[i].score &lt; 60)</span><br><span class="line">            failed++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // initialize order array</span><br><span class="line">    for (i = 0; i &lt; n; i++)</span><br><span class="line">        orderd[i] = i;</span><br><span class="line"></span><br><span class="line">    // sort stu array according to score decreasingly</span><br><span class="line">    for (pass = 0; pass &lt; n - 1; pass++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (i = 0; i &lt; n - pass - 1; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (stu[orderd[i]].score &lt; stu[orderd[i + 1]].score)</span><br><span class="line">            &#123;</span><br><span class="line">                int temp;</span><br><span class="line">                temp = orderd[i];</span><br><span class="line">                orderd[i] = orderd[i + 1];</span><br><span class="line">                orderd[i + 1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // print out result</span><br><span class="line">    printf(&quot;%d\n&quot;, failed);</span><br><span class="line">    for (i = n - failed; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        printf(&quot;%s %d\n&quot;, stu[orderd[i]].ticket, stu[orderd[i]].score);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E9%9D%9E%E5%90%8C%E5%87%A1%E6%83%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/06/%E9%9D%9E%E5%90%8C%E5%87%A1%E6%83%B3/" class="post-title-link" itemprop="url">非同凡“想”</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-10-06 00:32:30" itemprop="dateCreated datePublished" datetime="2021-10-06T00:32:30+08:00">2021-10-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-07 01:20:06" itemprop="dateModified" datetime="2022-09-07T01:20:06+08:00">2022-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="——纪念那位站在科技与人文交叉路口的领袖"><a href="#——纪念那位站在科技与人文交叉路口的领袖" class="headerlink" title="——纪念那位站在科技与人文交叉路口的领袖"></a>——纪念那位站在科技与人文交叉路口的领袖</h2><p>现在是2021年10月5日，也是伟大的科技领域领袖Steve Jobs逝世十周年的纪念日。</p>
-<p>十年前，iPhone 4S的发布，永远的改变了移动互联网的格局，同年，苹果永远的领袖乔布斯在见证了4S的发布后也因癌症永远的离开了我们……这不仅意味着一个领袖的离去，还意味着那个独属于他的英雄时代的落幕。</p>
-<p>1955年2月24日，史蒂夫·乔布斯出生在美国加利福尼亚州旧金山，刚刚出世就被父母遗弃了。幸运的是，保罗·乔布斯和克拉拉·乔布斯——一对好心的夫妻领养了他。也正是因为长于这个平凡而又不普通的家庭，乔布斯才成为乔布斯。老乔布斯是一位精明能干的工程师，他的身体力行使得乔布斯极具创新能力与动手能力，这也为他日后成为伟大的产品大师打下了坚实的基础。</p>
-<p>然而在乔布斯成长的种种经历中，笔者认为，之所以让乔布斯与众不同的，并不是所谓的工程师经历，而是一次父子一起修栅栏的经历。老乔布斯喜欢自己动手修缮家里，在一个晴朗的周末，他带着乔布斯用购买来的材料和车库里的工具修建栅栏，在父子的齐心协力下，他们为房子外围建好了从外面看起来完美无限的栅栏。乔布斯对此很满意，然而老乔布斯却说：“儿子，咱们才完成了一半。”乔布斯对此非常不解，明明已经修好的围栏，为什么要说是只完成了一半？父亲接着说道：“完美的栅栏应该是里外看得来都是井井有条，咱爷俩得在内侧多下下功夫。”乔布斯相当认同父亲这个理念，即必须关注隐藏部分的美观，而充满激情的工艺一定要确保这一点。这一次乔布斯算是真正明白了何为完美，我想这也是为何他日后能得到“完美主义者”的标签。</p>
-<p><img src="http://35.201.132.62/wp-content/uploads/2021/10/OIP.zOc0DUE_k9B3-vEFv2l65wHaDa-1.jpeg"></p>
-<p>于1997年发布的iMac算是完美诠释了乔布斯的产品哲学<br>半透明的外壳让人意识到原来电脑内部也可以是如此完美</p>
-<p>在一次采访中，乔布斯直言友商的产品“没有灵魂”。一个物件又何来“灵魂”一说？我想，乔布斯在发布会的话完美解释了他的观点：</p>
-<blockquote>
-<p><em>Technology alone is not enough. It’s technology married with the liberal arts, married with the humanities, that yields the results that makes our hearts sing.</em></p>
-</blockquote>
-<blockquote>
-<p>“仅靠技术是不够的，技术与文学、与人文结合产生的结果才能唱出我们的心声。（笔者的理解）</p>
-</blockquote>
-<p>乔布斯认为，一个完美的产品，应当是对美学、对人文有追求的，而不是仅仅一味追求硬件上的性能、跑分。苹果产品的一次次大获成功，也证明了这一产品美学的超人的、是正确的。站在科技与人文的交叉路口，是乔布斯的追求、苹果公司的追求，也更应该是所有领域企业、机构的追求，这种有人文气息、有灵魂的产品，怎么可能不让人产生共鸣，怎么可能不震撼人心，又怎么可能不改变世界呢？</p>
-<p>完美主义与人文主义，是乔布斯在时苹果产品的内核，也是苹果产品的核心竞争力所在。</p>
-<p>愿乔布斯的精神长存，他为我们所有人指引了方向。</p>
-<p>最后笔者想以乔布斯生前在斯坦福大学演讲所说的话与君共勉：</p>
-<blockquote>
-<p>Stay hungry ，stay foolish.</p>
-<p>求知若饥，虚心若愚。</p>
-</blockquote>
-<p>附：乔布斯配音的经典广告《Think Different（非同凡响）》</p>
-<blockquote>
-<p>Here’s to the crazy ones.<br>The misfits. The rebels. The troublemakers. </p>
-<p>The round pegs in the square holes. The ones who see things differently.</p>
-<p>They’re not fond of rules. And they have no respect for the status quo. </p>
-<p>You can praise them, quote them, disagree with them, disbelieve them, glorify or vilify them.</p>
-<p>About the only thing you can’t do is ignore them. </p>
-<p>Because they change things.</p>
-<p>They invent. They imagine. They heal. They explore. They create. They inspire.</p>
-<p>They push the human race forward.</p>
-<p>Maybe they have to be crazy. <br>How else can you stare at an empty canvas and see a work of art? <br>Or sit in silence and hear a song that’s never been written? <br>Or gaze at a red planet and see a laboratory on wheels? </p>
-<p>We make tools for these kinds of people. </p>
-<p>While some may see them as the crazy ones, we see genius. </p>
-<p>Because the people who are crazy enough to think that they can change the world, are the ones who do.</p>
-</blockquote>
-<blockquote>
-<p>向那些疯狂的家伙们致敬， <br>他们特立独行， 他们桀骜不驯， 他们惹事生非， 他们格格不入，</p>
-<p>他们用与众不同的眼光看待事物， 他们不喜欢墨守成规， 他们也不愿安于现状。 <br>你可以赞美他们，引用他们，反对他们， 质疑他们，颂扬或是诋毁他们， </p>
-<p>但唯独不能忽略他们，<br>因为他们带来了变革。 </p>
-<p>他们发明，他们想象，他们治愈， 他们探索，他们创造，他们启迪， 他们推动人类向前发展。</p>
-<p>也许，他们必须疯狂。<br>要不然怎么能盯着空白的画布，就“看到”了一幅画作？ <br>或者静静坐着，就“听见”了未谱写过的歌曲？ <br>或者凝视着一颗红色行星，就“看见”了运转中的实验室？ </p>
-<p>我们为这样的人制造工具。<br>或许他们是别人眼里的疯子， 但他们却是我们眼中的天才。 <br>因为那些疯狂到以为自己能够改变世界的人， 正是改变了世界的人。</p>
-</blockquote>
-<p>附：乔布斯逝世十周年苹果官方网站纪念海报与视频</p>
-<p><img src="http://35.201.132.62/wp-content/uploads/2021/10/%E6%88%AA%E5%B1%8F2021-10-05-%E4%B8%8B%E5%8D%8810.16.38-1024x612.png"></p>
-<p><img src="http://35.201.132.62/wp-content/uploads/2021/10/581633451126_.pic_hd-3-400x1024.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E9%9D%9E%E5%90%8C%E5%87%A1%E6%83%B3-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/06/%E9%9D%9E%E5%90%8C%E5%87%A1%E6%83%B3-1/" class="post-title-link" itemprop="url">非同凡“想”</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-10-06 00:32:30" itemprop="dateCreated datePublished" datetime="2021-10-06T00:32:30+08:00">2021-10-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-07 01:26:14" itemprop="dateModified" datetime="2022-09-07T01:26:14+08:00">2022-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="——纪念那位站在科技与人文交叉路口的领袖"><a href="#——纪念那位站在科技与人文交叉路口的领袖" class="headerlink" title="——纪念那位站在科技与人文交叉路口的领袖"></a>——纪念那位站在科技与人文交叉路口的领袖</h2><p>现在是2021年10月5日，也是伟大的科技领域领袖Steve Jobs逝世十周年的纪念日。</p>
-<p>十年前，iPhone 4S的发布，永远的改变了移动互联网的格局，同年，苹果永远的领袖乔布斯在见证了4S的发布后也因癌症永远的离开了我们……这不仅意味着一个领袖的离去，还意味着那个独属于他的英雄时代的落幕。</p>
-<p>1955年2月24日，史蒂夫·乔布斯出生在美国加利福尼亚州旧金山，刚刚出世就被父母遗弃了。幸运的是，保罗·乔布斯和克拉拉·乔布斯——一对好心的夫妻领养了他。也正是因为长于这个平凡而又不普通的家庭，乔布斯才成为乔布斯。老乔布斯是一位精明能干的工程师，他的身体力行使得乔布斯极具创新能力与动手能力，这也为他日后成为伟大的产品大师打下了坚实的基础。</p>
-<p>然而在乔布斯成长的种种经历中，笔者认为，之所以让乔布斯与众不同的，并不是所谓的工程师经历，而是一次父子一起修栅栏的经历。老乔布斯喜欢自己动手修缮家里，在一个晴朗的周末，他带着乔布斯用购买来的材料和车库里的工具修建栅栏，在父子的齐心协力下，他们为房子外围建好了从外面看起来完美无限的栅栏。乔布斯对此很满意，然而老乔布斯却说：“儿子，咱们才完成了一半。”乔布斯对此非常不解，明明已经修好的围栏，为什么要说是只完成了一半？父亲接着说道：“完美的栅栏应该是里外看得来都是井井有条，咱爷俩得在内侧多下下功夫。”乔布斯相当认同父亲这个理念，即必须关注隐藏部分的美观，而充满激情的工艺一定要确保这一点。这一次乔布斯算是真正明白了何为完美，我想这也是为何他日后能得到“完美主义者”的标签。</p>
-<p><img src="http://35.201.132.62/wp-content/uploads/2021/10/OIP.zOc0DUE_k9B3-vEFv2l65wHaDa-1.jpeg"></p>
-<p>于1997年发布的iMac算是完美诠释了乔布斯的产品哲学<br>半透明的外壳让人意识到原来电脑内部也可以是如此完美</p>
-<p>在一次采访中，乔布斯直言友商的产品“没有灵魂”。一个物件又何来“灵魂”一说？我想，乔布斯在发布会的话完美解释了他的观点：</p>
-<blockquote>
-<p><em>Technology alone is not enough. It’s technology married with the liberal arts, married with the humanities, that yields the results that makes our hearts sing.</em></p>
-</blockquote>
-<blockquote>
-<p>“仅靠技术是不够的，技术与文学、与人文结合产生的结果才能唱出我们的心声。（笔者的理解）</p>
-</blockquote>
-<p>乔布斯认为，一个完美的产品，应当是对美学、对人文有追求的，而不是仅仅一味追求硬件上的性能、跑分。苹果产品的一次次大获成功，也证明了这一产品美学的超人的、是正确的。站在科技与人文的交叉路口，是乔布斯的追求、苹果公司的追求，也更应该是所有领域企业、机构的追求，这种有人文气息、有灵魂的产品，怎么可能不让人产生共鸣，怎么可能不震撼人心，又怎么可能不改变世界呢？</p>
-<p>完美主义与人文主义，是乔布斯在时苹果产品的内核，也是苹果产品的核心竞争力所在。</p>
-<p>愿乔布斯的精神长存，他为我们所有人指引了方向。</p>
-<p>最后笔者想以乔布斯生前在斯坦福大学演讲所说的话与君共勉：</p>
-<blockquote>
-<p>Stay hungry ，stay foolish.</p>
-<p>求知若饥，虚心若愚。</p>
-</blockquote>
-<p>附：乔布斯配音的经典广告《Think Different（非同凡响）》</p>
-<blockquote>
-<p>Here’s to the crazy ones.<br>The misfits. The rebels. The troublemakers. </p>
-<p>The round pegs in the square holes. The ones who see things differently.</p>
-<p>They’re not fond of rules. And they have no respect for the status quo. </p>
-<p>You can praise them, quote them, disagree with them, disbelieve them, glorify or vilify them.</p>
-<p>About the only thing you can’t do is ignore them. </p>
-<p>Because they change things.</p>
-<p>They invent. They imagine. They heal. They explore. They create. They inspire.</p>
-<p>They push the human race forward.</p>
-<p>Maybe they have to be crazy. <br>How else can you stare at an empty canvas and see a work of art? <br>Or sit in silence and hear a song that’s never been written? <br>Or gaze at a red planet and see a laboratory on wheels? </p>
-<p>We make tools for these kinds of people. </p>
-<p>While some may see them as the crazy ones, we see genius. </p>
-<p>Because the people who are crazy enough to think that they can change the world, are the ones who do.</p>
-</blockquote>
-<blockquote>
-<p>向那些疯狂的家伙们致敬， <br>他们特立独行， 他们桀骜不驯， 他们惹事生非， 他们格格不入，</p>
-<p>他们用与众不同的眼光看待事物， 他们不喜欢墨守成规， 他们也不愿安于现状。 <br>你可以赞美他们，引用他们，反对他们， 质疑他们，颂扬或是诋毁他们， </p>
-<p>但唯独不能忽略他们，<br>因为他们带来了变革。 </p>
-<p>他们发明，他们想象，他们治愈， 他们探索，他们创造，他们启迪， 他们推动人类向前发展。</p>
-<p>也许，他们必须疯狂。<br>要不然怎么能盯着空白的画布，就“看到”了一幅画作？ <br>或者静静坐着，就“听见”了未谱写过的歌曲？ <br>或者凝视着一颗红色行星，就“看见”了运转中的实验室？ </p>
-<p>我们为这样的人制造工具。<br>或许他们是别人眼里的疯子， 但他们却是我们眼中的天才。 <br>因为那些疯狂到以为自己能够改变世界的人， 正是改变了世界的人。</p>
-</blockquote>
-<p>附：乔布斯逝世十周年苹果官方网站纪念海报与视频</p>
-<p><img src="http://35.201.132.62/wp-content/uploads/2021/10/%E6%88%AA%E5%B1%8F2021-10-05-%E4%B8%8B%E5%8D%8810.16.38-1024x612.png"></p>
-<p><img src="http://35.201.132.62/wp-content/uploads/2021/10/581633451126_.pic_hd-3-400x1024.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/02/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9%EF%BC%8C%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/02/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9%EF%BC%8C%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/" class="post-title-link" itemprop="url">新的起点，重新开始</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-10-02 22:33:35" itemprop="dateCreated datePublished" datetime="2021-10-02T22:33:35+08:00">2021-10-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-07 01:20:06" itemprop="dateModified" datetime="2022-09-07T01:20:06+08:00">2022-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这是讲述我初入大学体验的文章，但我觉得，这个故事，得从我上高中开始讲起。</p>
-<p>出生在中产家庭的我，虽然算不上含着金钥匙出生，但在成年之前的生活也算是顺风顺水，走着“别人家的孩子”的路一路从区里的公办小学升到市重点初中再到省重点高中（全国top30左右吧）。也许一切都得来的太顺利，在升入高中之后，虽然成绩在学校里不上不下（勉强算是偏上吧），但是始终感觉如果自己打起百分之百的努力，定能升入自己理想的大学。这种甜蜜泡沫一直持续到高二结束，可在高三之后，始终找不到属于自己的状态（有机会再讲这其中的故事吧），最终在高考中发挥失常（甚至是相比于高三状态的失常），机缘巧合之下来到了北邮读书。</p>
-<p>个人觉得北京邮电大学算是我的分数段里的最优解，又由于我从小对于互联网专业的兴趣，北邮的物联网工程专业也算是读到了我理想学校的理想专业。毕竟如果以后入职互联网公司的话，北邮的平台妥妥够用，本身北邮计算机相关专业又够强，一番抉择之下，我选择放弃了复读的计划，踏入了北京邮电大学的校园，前言告一段落。</p>
-<p>虽然我对大学自学为主这种观点早有所耳闻，但当我进入校园开始正式学习之后才算是真正明白为何自学是大学的主旋律。大学老师，基本都属于是照本宣科的水平，念ppt是他们的主要旋律，而想要讲出一些东西的老师，又碍于学生参差不齐的水平无法达到教学相长的理想状态。这一度令我对于北邮很失望，因为我觉得是北邮的问题。抱着自学就是在自救的想法，我一头扎进了图书馆里，闷闷不乐，甚至又萌生出了复读的想法。</p>
-<p>这个想法的转变，起于一个在图书馆的下午。</p>
-<p>“你们老师上课用ppt吗 我们老师全靠ppt”，我的一位好哥们给我发了一条QQ。</p>
-<p>“确实，都一样”，我又突然想到他是在上交念书，“不会吧，上交都这样吗？”。</p>
-<p>“清华也一样，国内大学都不行。”他的话让我现在有些错愕，</p>
-<p>“给你看看<a target="_blank" rel="noopener" href="https://survivesjtu.gitbook.io/survivesjtumanual/li-zhi-pian/huan-ying-lai-dao-shang-hai-jiao-tong-da-xue?utm_source=qq&utm_medium=social&utm_oi=925489967873024000">交大生存手册</a>。”，他最后补了一句，“振聋发聩。”</p>
-<p>不论怎样，交大人编出的手册，确实让破除了我对北邮的质疑，只不过转而引起了我对整个国家的本科教育的质疑，教育资源的匮乏，遍及了中国高校。现状如此，再多抱怨也是无用，只能思考下面的出路，这是我想到了一句在我脑中尘封多年的话。</p>
-<blockquote>
-<p>“改变能改变的。”</p>
-</blockquote>
-<p>于是我便思考，是不是还有去上课的必要呢？</p>
-<p>如果已知随波逐流，天天听老师在讲台上念ppt只会走向平庸，那么一切留在教室里的理由（怕点名、怕遗漏知识点）都只是在为自己停留在原地所找的心安理得的借口。</p>
-<p>第二天，我便决定不再去上线代、高数、程序设计课，转而在网上寻找资源；mit的网课、美国藤校的教材在我一番找寻下收入囊中。在图书馆里，我正式开始了自己的自学之旅。</p>
-<p>自学的好处很多，可以自由支配进度，想休息时也不必在意他人，但也有坏处，就是会不自主的懈怠。我由此担心会不会顾此失彼，反而还不如循规蹈矩地做事……</p>
-<p>然而，有一天晚上，我为了完成网上的oj平台的编程训练，竟然在宿舍里一动不动敲代码3小时，这时我似乎明白了，我真的热爱这门学科，既然如此，我想我也会全力以赴一回的吧（毕竟原先让我连续做3小时高考题就像是要杀了我）。</p>
-<p>迈入大学校园，对我是一次不小的挑战，但同时对于我来说也是一个绝佳的提升自己的机遇。我希望我能不忘初心，向自己的目标不断迈进（关于目标与理想，或许以后也有机会再聊）。</p>
-<p>这篇文章写于大学开学的一个月后，我知道以后我的想法可能会变、看待问题的角度可能会变，但我写下这篇文章，最大的愿景就是希望我能保持我对这门专业的热情，一直走下去，最后能让我迎来属于我自己的黄金时代。</p>
-<p>面对新的起点，愿我破除先前稚嫩的想法，不断成长，重新开始。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/02/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9%EF%BC%8C%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/02/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9%EF%BC%8C%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B-1/" class="post-title-link" itemprop="url">新的起点，重新开始</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-10-02 22:33:35" itemprop="dateCreated datePublished" datetime="2021-10-02T22:33:35+08:00">2021-10-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-07 01:26:14" itemprop="dateModified" datetime="2022-09-07T01:26:14+08:00">2022-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这是讲述我初入大学体验的文章，但我觉得，这个故事，得从我上高中开始讲起。</p>
-<p>出生在中产家庭的我，虽然算不上含着金钥匙出生，但在成年之前的生活也算是顺风顺水，走着“别人家的孩子”的路一路从区里的公办小学升到市重点初中再到省重点高中（全国top30左右吧）。也许一切都得来的太顺利，在升入高中之后，虽然成绩在学校里不上不下（勉强算是偏上吧），但是始终感觉如果自己打起百分之百的努力，定能升入自己理想的大学。这种甜蜜泡沫一直持续到高二结束，可在高三之后，始终找不到属于自己的状态（有机会再讲这其中的故事吧），最终在高考中发挥失常（甚至是相比于高三状态的失常），机缘巧合之下来到了北邮读书。</p>
-<p>个人觉得北京邮电大学算是我的分数段里的最优解，又由于我从小对于互联网专业的兴趣，北邮的物联网工程专业也算是读到了我理想学校的理想专业。毕竟如果以后入职互联网公司的话，北邮的平台妥妥够用，本身北邮计算机相关专业又够强，一番抉择之下，我选择放弃了复读的计划，踏入了北京邮电大学的校园，前言告一段落。</p>
-<p>虽然我对大学自学为主这种观点早有所耳闻，但当我进入校园开始正式学习之后才算是真正明白为何自学是大学的主旋律。大学老师，基本都属于是照本宣科的水平，念ppt是他们的主要旋律，而想要讲出一些东西的老师，又碍于学生参差不齐的水平无法达到教学相长的理想状态。这一度令我对于北邮很失望，因为我觉得是北邮的问题。抱着自学就是在自救的想法，我一头扎进了图书馆里，闷闷不乐，甚至又萌生出了复读的想法。</p>
-<p>这个想法的转变，起于一个在图书馆的下午。</p>
-<p>“你们老师上课用ppt吗 我们老师全靠ppt”，我的一位好哥们给我发了一条QQ。</p>
-<p>“确实，都一样”，我又突然想到他是在上交念书，“不会吧，上交都这样吗？”。</p>
-<p>“清华也一样，国内大学都不行。”他的话让我现在有些错愕，</p>
-<p>“给你看看<a target="_blank" rel="noopener" href="https://survivesjtu.gitbook.io/survivesjtumanual/li-zhi-pian/huan-ying-lai-dao-shang-hai-jiao-tong-da-xue?utm_source=qq&utm_medium=social&utm_oi=925489967873024000">交大生存手册</a>。”，他最后补了一句，“振聋发聩。”</p>
-<p>不论怎样，交大人编出的手册，确实让破除了我对北邮的质疑，只不过转而引起了我对整个国家的本科教育的质疑，教育资源的匮乏，遍及了中国高校。现状如此，再多抱怨也是无用，只能思考下面的出路，这是我想到了一句在我脑中尘封多年的话。</p>
-<blockquote>
-<p>“改变能改变的。”</p>
-</blockquote>
-<p>于是我便思考，是不是还有去上课的必要呢？</p>
-<p>如果已知随波逐流，天天听老师在讲台上念ppt只会走向平庸，那么一切留在教室里的理由（怕点名、怕遗漏知识点）都只是在为自己停留在原地所找的心安理得的借口。</p>
-<p>第二天，我便决定不再去上线代、高数、程序设计课，转而在网上寻找资源；mit的网课、美国藤校的教材在我一番找寻下收入囊中。在图书馆里，我正式开始了自己的自学之旅。</p>
-<p>自学的好处很多，可以自由支配进度，想休息时也不必在意他人，但也有坏处，就是会不自主的懈怠。我由此担心会不会顾此失彼，反而还不如循规蹈矩地做事……</p>
-<p>然而，有一天晚上，我为了完成网上的oj平台的编程训练，竟然在宿舍里一动不动敲代码3小时，这时我似乎明白了，我真的热爱这门学科，既然如此，我想我也会全力以赴一回的吧（毕竟原先让我连续做3小时高考题就像是要杀了我）。</p>
-<p>迈入大学校园，对我是一次不小的挑战，但同时对于我来说也是一个绝佳的提升自己的机遇。我希望我能不忘初心，向自己的目标不断迈进（关于目标与理想，或许以后也有机会再聊）。</p>
-<p>这篇文章写于大学开学的一个月后，我知道以后我的想法可能会变、看待问题的角度可能会变，但我写下这篇文章，最大的愿景就是希望我能保持我对这门专业的热情，一直走下去，最后能让我迎来属于我自己的黄金时代。</p>
-<p>面对新的起点，愿我破除先前稚嫩的想法，不断成长，重新开始。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/02/%E7%94%B5%E9%82%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/02/%E7%94%B5%E9%82%AE/" class="post-title-link" itemprop="url">点这里可以给我发邮件</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-10-02 01:20:12" itemprop="dateCreated datePublished" datetime="2021-10-02T01:20:12+08:00">2021-10-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-07 01:20:06" itemprop="dateModified" datetime="2022-09-07T01:20:06+08:00">2022-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/02/%E7%94%B5%E9%82%AE-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/02/%E7%94%B5%E9%82%AE-1/" class="post-title-link" itemprop="url">点这里可以给我发邮件</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-10-02 01:20:12" itemprop="dateCreated datePublished" datetime="2021-10-02T01:20:12+08:00">2021-10-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-09-07 01:26:14" itemprop="dateModified" datetime="2022-09-07T01:26:14+08:00">2022-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/uncategorized/" itemprop="url" rel="index"><span itemprop="name">uncategorized</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <span class="site-state-item-count">20</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">categories</span>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-</body>
-</html>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/02/23/wp-global-styles-adams-1-4-26-1/" title="Custom Styles"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Custom Styles"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/02/23/wp-global-styles-adams-1-4-26-1/" title="Custom Styles">Custom Styles</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-23T10:15:31.000Z" title="Created 2022-02-23 18:15:31">2022-02-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content">{“version”: 2, “isGlobalStylesUserThemeJSON”: true }
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/02/23/wp-global-styles-adams-1-4-26/" title="Custom Styles"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Custom Styles"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/02/23/wp-global-styles-adams-1-4-26/" title="Custom Styles">Custom Styles</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-23T10:15:31.000Z" title="Created 2022-02-23 18:15:31">2022-02-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content">{“version”: 2, “isGlobalStylesUserThemeJSON”: true }
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/01/27/the-final-exam-of-the-introduction-of-computer-science-1/" title="The final exam of the introduction of computer science"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The final exam of the introduction of computer science"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/27/the-final-exam-of-the-introduction-of-computer-science-1/" title="The final exam of the introduction of computer science">The final exam of the introduction of computer science</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-26T19:43:18.000Z" title="Created 2022-01-27 03:43:18">2022-01-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content">Question 11）Please explain why modern computers adopt binary systems? (5 marks)
+2）What`s the difference when storing an integer 1 and a character ’1’? (5 marks)
+Answer:1）Binary numbers are ideal for machines because they require only two digits, which can easily be represented by the on and off states of a switch. When computers became electronic, the binary system was particularly appropriate because an electrical circuit is either on or off.
+https://www.britannica.com/technology/computer/Histo ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/01/27/the-final-exam-of-the-introduction-of-computer-science/" title="The final exam of the introduction of computer science"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The final exam of the introduction of computer science"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/27/the-final-exam-of-the-introduction-of-computer-science/" title="The final exam of the introduction of computer science">The final exam of the introduction of computer science</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-26T19:43:18.000Z" title="Created 2022-01-27 03:43:18">2022-01-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content">Question 11）Please explain why modern computers adopt binary systems? (5 marks)
+2）What`s the difference when storing an integer 1 and a character ’1’? (5 marks)
+Answer:1）Binary numbers are ideal for machines because they require only two digits, which can easily be represented by the on and off states of a switch. When computers became electronic, the binary system was particularly appropriate because an electrical circuit is either on or off.
+https://www.britannica.com/technology/computer/Histo ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/10/06/%E9%9D%9E%E5%90%8C%E5%87%A1%E6%83%B3-1/" title="非同凡“想”"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="非同凡“想”"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/06/%E9%9D%9E%E5%90%8C%E5%87%A1%E6%83%B3-1/" title="非同凡“想”">非同凡“想”</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-10-05T16:32:30.000Z" title="Created 2021-10-06 00:32:30">2021-10-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content">——纪念那位站在科技与人文交叉路口的领袖现在是2021年10月5日，也是伟大的科技领域领袖Steve Jobs逝世十周年的纪念日。
+十年前，iPhone 4S的发布，永远的改变了移动互联网的格局，同年，苹果永远的领袖乔布斯在见证了4S的发布后也因癌症永远的离开了我们……这不仅意味着一个领袖的离去，还意味着那个独属于他的英雄时代的落幕。
+1955年2月24日，史蒂夫·乔布斯出生在美国加利福尼亚州旧金山，刚刚出世就被父母遗弃了。幸运的是，保罗·乔布斯和克拉拉·乔布斯——一对好心的夫妻领养了他。也正是因为长于这个平凡而又不普通的家庭，乔布斯才成为乔布斯。老乔布斯是一位精明能干的工程师，他的身体力行使得乔布斯极具创新能力与动手能力，这也为他日后成为伟大的产品大师打下了坚实的基础。
+然而在乔布斯成长的种种经历中，笔者认为，之所以让乔布斯与众不同的，并不是所谓的工程师经历，而是一次父子一起修栅栏的经历。老乔布斯喜欢自己动手修缮家里，在一个晴朗的周末，他带着乔布斯用购买来的材料和车库里的工具修建栅栏，在父子的齐心协力下，他们为房子外围建好了从外面看起来完美无限的栅栏。乔布斯对此很满意，然而老乔布斯却 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/10/06/%E9%9D%9E%E5%90%8C%E5%87%A1%E6%83%B3/" title="非同凡“想”"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="非同凡“想”"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/06/%E9%9D%9E%E5%90%8C%E5%87%A1%E6%83%B3/" title="非同凡“想”">非同凡“想”</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-10-05T16:32:30.000Z" title="Created 2021-10-06 00:32:30">2021-10-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content">——纪念那位站在科技与人文交叉路口的领袖现在是2021年10月5日，也是伟大的科技领域领袖Steve Jobs逝世十周年的纪念日。
+十年前，iPhone 4S的发布，永远的改变了移动互联网的格局，同年，苹果永远的领袖乔布斯在见证了4S的发布后也因癌症永远的离开了我们……这不仅意味着一个领袖的离去，还意味着那个独属于他的英雄时代的落幕。
+1955年2月24日，史蒂夫·乔布斯出生在美国加利福尼亚州旧金山，刚刚出世就被父母遗弃了。幸运的是，保罗·乔布斯和克拉拉·乔布斯——一对好心的夫妻领养了他。也正是因为长于这个平凡而又不普通的家庭，乔布斯才成为乔布斯。老乔布斯是一位精明能干的工程师，他的身体力行使得乔布斯极具创新能力与动手能力，这也为他日后成为伟大的产品大师打下了坚实的基础。
+然而在乔布斯成长的种种经历中，笔者认为，之所以让乔布斯与众不同的，并不是所谓的工程师经历，而是一次父子一起修栅栏的经历。老乔布斯喜欢自己动手修缮家里，在一个晴朗的周末，他带着乔布斯用购买来的材料和车库里的工具修建栅栏，在父子的齐心协力下，他们为房子外围建好了从外面看起来完美无限的栅栏。乔布斯对此很满意，然而老乔布斯却 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/10/02/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9%EF%BC%8C%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B-1/" title="新的起点，重新开始"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新的起点，重新开始"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/02/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9%EF%BC%8C%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B-1/" title="新的起点，重新开始">新的起点，重新开始</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-10-02T14:33:35.000Z" title="Created 2021-10-02 22:33:35">2021-10-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content">这是讲述我初入大学体验的文章，但我觉得，这个故事，得从我上高中开始讲起。
+出生在中产家庭的我，虽然算不上含着金钥匙出生，但在成年之前的生活也算是顺风顺水，走着“别人家的孩子”的路一路从区里的公办小学升到市重点初中再到省重点高中（全国top30左右吧）。也许一切都得来的太顺利，在升入高中之后，虽然成绩在学校里不上不下（勉强算是偏上吧），但是始终感觉如果自己打起百分之百的努力，定能升入自己理想的大学。这种甜蜜泡沫一直持续到高二结束，可在高三之后，始终找不到属于自己的状态（有机会再讲这其中的故事吧），最终在高考中发挥失常（甚至是相比于高三状态的失常），机缘巧合之下来到了北邮读书。
+个人觉得北京邮电大学算是我的分数段里的最优解，又由于我从小对于互联网专业的兴趣，北邮的物联网工程专业也算是读到了我理想学校的理想专业。毕竟如果以后入职互联网公司的话，北邮的平台妥妥够用，本身北邮计算机相关专业又够强，一番抉择之下，我选择放弃了复读的计划，踏入了北京邮电大学的校园，前言告一段落。
+虽然我对大学自学为主这种观点早有所耳闻，但当我进入校园开始正式学习之后才算是真正明白为何自学是大学的主旋律。大学老师，基本 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/10/02/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9%EF%BC%8C%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/" title="新的起点，重新开始"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新的起点，重新开始"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/02/%E6%96%B0%E7%9A%84%E8%B5%B7%E7%82%B9%EF%BC%8C%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/" title="新的起点，重新开始">新的起点，重新开始</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-10-02T14:33:35.000Z" title="Created 2021-10-02 22:33:35">2021-10-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content">这是讲述我初入大学体验的文章，但我觉得，这个故事，得从我上高中开始讲起。
+出生在中产家庭的我，虽然算不上含着金钥匙出生，但在成年之前的生活也算是顺风顺水，走着“别人家的孩子”的路一路从区里的公办小学升到市重点初中再到省重点高中（全国top30左右吧）。也许一切都得来的太顺利，在升入高中之后，虽然成绩在学校里不上不下（勉强算是偏上吧），但是始终感觉如果自己打起百分之百的努力，定能升入自己理想的大学。这种甜蜜泡沫一直持续到高二结束，可在高三之后，始终找不到属于自己的状态（有机会再讲这其中的故事吧），最终在高考中发挥失常（甚至是相比于高三状态的失常），机缘巧合之下来到了北邮读书。
+个人觉得北京邮电大学算是我的分数段里的最优解，又由于我从小对于互联网专业的兴趣，北邮的物联网工程专业也算是读到了我理想学校的理想专业。毕竟如果以后入职互联网公司的话，北邮的平台妥妥够用，本身北邮计算机相关专业又够强，一番抉择之下，我选择放弃了复读的计划，踏入了北京邮电大学的校园，前言告一段落。
+虽然我对大学自学为主这种观点早有所耳闻，但当我进入校园开始正式学习之后才算是真正明白为何自学是大学的主旋律。大学老师，基本 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/10/02/%E7%94%B5%E9%82%AE-1/" title="点这里可以给我发邮件"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="点这里可以给我发邮件"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/02/%E7%94%B5%E9%82%AE-1/" title="点这里可以给我发邮件">点这里可以给我发邮件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-10-01T17:20:12.000Z" title="Created 2021-10-02 01:20:12">2021-10-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/10/02/%E7%94%B5%E9%82%AE/" title="点这里可以给我发邮件"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="点这里可以给我发邮件"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/02/%E7%94%B5%E9%82%AE/" title="点这里可以给我发邮件">点这里可以给我发邮件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-10-01T17:20:12.000Z" title="Created 2021-10-02 01:20:12">2021-10-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/uncategorized/">uncategorized</a></span></div><div class="content"></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/09/07/Bloggg/" title="Bloggg"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Bloggg"/></a><div class="content"><a class="title" href="/2022/09/07/Bloggg/" title="Bloggg">Bloggg</a><time datetime="2022-09-06T16:41:32.000Z" title="Created 2022-09-07 00:41:32">2022-09-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/07/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/09/07/hello-world/" title="Hello World">Hello World</a><time datetime="2022-09-06T16:40:04.405Z" title="Created 2022-09-07 00:40:04">2022-09-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/06/after-cs61b-1/" title="CS61B之后"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CS61B之后"/></a><div class="content"><a class="title" href="/2022/09/06/after-cs61b-1/" title="CS61B之后">CS61B之后</a><time datetime="2022-09-06T15:58:45.000Z" title="Created 2022-09-06 23:58:45">2022-09-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/06/after-cs61b/" title="CS61B之后"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CS61B之后"/></a><div class="content"><a class="title" href="/2022/09/06/after-cs61b/" title="CS61B之后">CS61B之后</a><time datetime="2022-09-06T15:58:45.000Z" title="Created 2022-09-06 23:58:45">2022-09-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/06/145-1/" title="Untitled Post - 3"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Untitled Post - 3"/></a><div class="content"><a class="title" href="/2022/09/06/145-1/" title="Untitled Post - 3">Untitled Post - 3</a><time datetime="2022-09-06T15:51:03.000Z" title="Created 2022-09-06 23:51:03">2022-09-06</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/uncategorized/"><span class="card-category-list-name">uncategorized</span><span class="card-category-list-count">18</span></a></li>
+            </ul></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">September 2022</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">February 2022</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">January 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">October 2021</span><span class="card-archive-list-count">6</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">20</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-09-07T01:09:58.221Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
