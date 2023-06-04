@@ -20,6 +20,11 @@ jobs:
       with:
         node-version: '12.x'
 
+    - name: Install Pandoc
+      run: |
+        wget https://github.com/jgm/pandoc/releases/download/2.10/pandoc-2.10-1-amd64.deb
+        sudo dpkg -i pandoc-2.10-1-amd64.deb
+
     - name: Install dependencies & Generate static files
       run: |
         node -v
