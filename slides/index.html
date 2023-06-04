@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduction to Probability Theory</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/sky.css">
+
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2 style="color: #000000;">Introduction to Probability Theory</h2>
+					<p style="font-size: 24px; color: #000000; text-align: center">This presentation will cover the following topics:</p>
+					<ul style="font-size: 20px; color: #000000;">
+						<li style="color: #4caf50;">Events and Their Probabilities</li>
+						<li style="color: #2196f3;">Random Variable</li>
+						<li style="color: #ff5722;">Random Vectors</li>
+						<li style="color: #9c27b0;">Sequences of Random Variables</li>
+					</ul>
+				</section>
+				<section>
+					<h1 style="color: #4caf50;">Events and Their Probabilities</h1>
+				</section>
+				<section data-markdown>
+						## Probabilistic Models
+
+						Elements of a Probabilistic Model:
+
+						- The sample space $\Omega$, the set of all possible outcomes of an experiment.
+
+						- The probability law, assigns to a set $A$ of possible outcomes a nonnegative number $\mathbf{P}(A)$, the probability of $A$.
+
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						## Sample Spaces and Events
+
+						Every probabilistic model involves an underlying process, called the **experiment**, that will produce exactly one out of several possible **outcomes**. The set of all possible outcomes is called the **sample space** of the experiment and is denoted by $\Omega$. A subset of the sample space, that is, a collection of possible outcomes, is called an **event**.
+			
+						Regardless of their number, different elements of the sample space should be distinct and **mutually exclusive**（互斥） so that when the experiment is carried out there is a unique outcome.
+		
+						Generally, the sample space chosen for a probabilistic model must be **collectively exhaustive**（完全穷尽）, in the sense that no matter what happens in the experiment, we always obtain an outcome that has been included in the sample space.
+						---
+						### Events as Sets
+
+						The jargons in set theory and probability theory
+
+`$$
+\begin{array}{|l|l|l|}
+\hline \text { Typical notation } & \text { Set jargon } & \text { Probability jargon } \\
+\hline \Omega & \text { Collection of objects } & \text { Sample space } \\
+\hline \omega & \text { Member of } \Omega & \text { Elementary event, outcome } \\
+\hline A & \text { Subset of } \Omega & \text { Events that some outcome in } A \text { occurs } \\
+\hline A \text { or } \bar{A} & \text { Complement of } A & \text { Event that no outcome in } A \text { occurs } \\
+\hline A \cap B & \text { Intersection } & \text { Both } A \text { and } B \\
+\hline A \cup B & \text { Union } & \text { Either } A \text { or } B \text { or both } \\
+\hline A-B & \text { Difference } & A, \text { but no } B \\
+\hline A \subseteq B & \text { Inclusion } & \text { If } A, \text { then } B \\
+\hline \emptyset & \text { Empty set } & \text { Impossible event } \\
+\hline
+\end{array}
+$$`
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						## Probability Laws
+
+						### Classical Probability
+
+						Generally, a random experiment $\mathrm{E}$ is classical if (i) E contains only different limited basic events, that is, $\Omega={\omega_1, \omega_2, \cdots, \omega_n}$. We call this kind of sample space simple space, and (ii) all outcomes are equally likely to occur.
+
+						If elementary events are assigned equal probabilities, then the probability of a disjunction of elementary events is just the number of events in the disjunction divided by the total number of elementary events. That is, for classical random experiment $\mathrm{E}, \Omega={\omega_1, \omega_2, \cdots, \omega_n}$, we define the probability of event $A$ as
+`$$
+P(A)=\frac{\# A}{\# \Omega}
+$$`
+						---
+						Example 1.3.4 Suppose that there are $n$ people, each person will be assigned to any of the $N(n \leqslant N)$ rooms with the same probability $1 / N$. We shall determine the probabilities of the following events:
+$A$ : For the given $n$ rooms, there is exactly one person in one room.
+$B:$ There is exactly one person in one room.
+$C:$ There are exactly $m$ people in a given room.
+---
+Solution. In this experiment, the number of all different possible outcomes are $N^n$.
+For event $A$, since $n$ rooms has been given in advance, the first people has $n$ choices, the second people has $n-1$ choices, $\cdots$. So there are $n$ ! possible outcomes in event $A$. We then calculate
+$$
+P(A)=\frac{n !}{N^n}
+$$
+For event $B$, the number of the outcomes that $n$ rooms are to be chosen at random from $N$ rooms is $\left(\begin{array}{l}N \\ n\end{array}\right)$. The next step is the same as in event $B$, then
+$$
+P(B)=\frac{\left(\begin{array}{l}
+N \\
+n
+\end{array}\right) n !}{N^n}
+$$
+For event $C$, the first step is choosing $m$ people from $n$ people at random and let them in the given room, and the number of this process is $\left(\begin{array}{l}n \\ m\end{array}\right)$. The second step is that $n-m$ people are about to be assigned $N-1$ rooms in any way and the number of this process is $(N-1)^{n-m}$. So the probability of event $C$ is
+$$
+P(C)=\frac{\left(\begin{array}{l}
+n \\
+m
+\end{array}\right)(N-1)^{n-m}}{N^n}
+$$
+						---
+						### Geometric Probability
+
+Problems of the above type and their solution techniques were first studied in the 18 th century, and the general topic became known as geometric probability. A random experiment $\mathrm{E}$ is called to be geometric if
+(i) the sample space is a measurable (such as length, area, volume, etc.) region, i.e., $0<$ $L(\Omega)<\infty$, and
+(ii) the probability of every event $A \subset \Omega$ is proportional to the measure $L(A)$ and has nothing to do with its position and shape.
+In this case, we define the probability of event $A$ as
+$$
+P(A)=\frac{L(A)}{L(\Omega)}
+$$
+and $P(\emptyset)=0$
+---
+Example 1.3.7 (Lunch date problem) You and one of your friends arrange to meet between 12:00 and 13:00. As a result, it is possible for one of you to arrive at random between 12:00 and 13:00 and waits exactly 20 minutes for another one. After 20 minutes, one of you leaves if another person has not arrived. What is the probability that you and your friend will meet?
+---
+Solution. Let $x$ and $y$ be the time you and your friend arriving the gate, respectively, then our sample space is a square $\Omega=\{(x, y) \mid 12 \leqslant x, y \leqslant 13\}$. Let $M$ be the event that two of you will meet at the gate, then $M$ will occur if and only if $|x-y| \leqslant 1 / 3$, i.e.,
+$$
+M=\{(x, y)|12 \leqslant x, y \leqslant 13,| x-y \mid \leqslant 1 / 3\}
+$$
+$M$ is shown as the shaded area in Fig. 1.2. In this problem, the expression "equally likely to occur" means that the probability that the sample point is located in a special region $M \subset \Omega$ is proportional to the area of $M$. Again, since the certain event $\Omega$ has area 1 , the probability of $M$ is equal to the area of $M$, i.e., $P(M)=1-\left(\frac{2}{3}\right)^2=\frac{5}{9}$.
+---
+![Figure 1.2](https://pic-1307682807.cos.ap-beijing.myqcloud.com/Screenshot%202023-05-31%20at%2017.11.27.png)
+						</textarea>
+					</section>
+				</section>
+	
+				<section>
+					
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+			});
+		</script>
+	</body>
+</html>
