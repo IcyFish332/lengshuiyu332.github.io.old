@@ -2,4 +2,5 @@
 Thumbs.db
 *.log
 .deploy*/
+.deploy_git/
 _multiconfig.yml
