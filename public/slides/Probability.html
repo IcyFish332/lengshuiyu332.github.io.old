@@ -810,9 +810,901 @@ $$`
 				</section>
 
 				<section>
-				
+					<section data-markdown>
+						<textarea data-template>
+							## Random Vectors and Joint Distributions
+
+The joint distribution function (joint d.f.) of $X$ and $Y$ is defined by
+
+$$
+F(x, y)=P(X \leqslant x, Y \leqslant y), \quad-\infty<x, y<\infty
+$$
+
+We can say that $F(x, y)$ is the probability $(X, Y) \in D_{1}$ in Fig. 3.1(a).
+
+(i) for any $x_{1}<x_{2}, y_{1}<y_{2}$, the event $\left\{X \leqslant x, y_{1}<Y \leqslant y_{2}\right\}$ consists of all points $(x, y)$ in the horizontal half-strip $D_{2}$ of Fig. 3.1(b), we maintain that
+
+$$
+P\left(X \leqslant x, y_{1}<Y \leqslant y_{2}\right)=F\left(x, y_{2}\right)-F\left(x, y_{1}\right)
+$$
+---
+(ii) for the event $\left\{x_{1}<X \leqslant x_{2}, Y \leqslant y\right\}$ consists of all points $(x, y)$ in the vertical half-strip $D_{3}$ of Fig. 3.1(b), we maintain that
+
+$$
+P\left(x_{1}<X \leqslant x_{2}, Y \leqslant y\right)=F\left(x_{2}, y\right)-F\left(x_{1}, y\right)
+$$
+
+(iii) for the event $\left\{x_{1}<X \leqslant x_{2}, y_{1}<Y \leqslant y_{2}\right\}$ consists of all points $(x, y)$ in the rectangle $D_{4}$ of Fig. 3.1(c), we have
+
+$$
+P\left(x_{1}<X \leqslant x_{2}, y_{1}<Y \leqslant y_{2}\right)=F\left(x_{2}, y_{2}\right)-F\left(x_{1}, y_{2}\right)-F\left(x_{2}, y_{1}\right)+F\left(x_{1}, y_{1}\right) \text {. }
+$$
+---
+Proposition 3.1.1 The joint distribution function $F(x, y)$ is such that
+
+(i) for any $x_{1}<x_{2}, F\left(x_{1}, y\right) \leqslant F\left(x_{2}, y\right)$; for any $y_{1}<y_{2}, F\left(x, y_{1}\right) \leqslant F\left(x, y_{2}\right).$
+
+(ii) $F(-\infty, y)=0, \quad F(x,-\infty)=0, \quad F(\infty, \infty)=1.$
+
+(iii) $\lim _{x \rightarrow x_{0}^{+}} F(x, y)=F\left(x_{0}, y\right), \quad \lim _{y \rightarrow y_{0}^{+}} F(x, y)=F\left(x, y_{0}\right)$.
+
+ $F(x,+\infty)$ and $F(+\infty, y)$ are the marginal distributions of $X$ and $Y$.
+`$$
+\begin{aligned}
+P(X>x, Y>y) & =1-P(\overline{\{X>x, Y>y\}}) \\
+& =1-p(\overline{\{X>x\}} \cup \overline{\{Y>y\}}) \\
+& =1-P(\{X \leqslant x\} \cup\{Y \leqslant y\}) \\
+& =1-[P(X \leqslant x)+P(Y \leqslant y)-P(X \leqslant x, Y \leqslant y)] \\
+& =1-F_{X}(x)-F_{Y}(y)+F(x, y) .
+\end{aligned}
+$$`
+---
+### Discrete Random Vectors
+
+For discrete bivariate random vectors, we always use the joint probability function (joint p.f.)
+
+$$
+p(x, y):=P(\{X=x\} \cap\{Y=y\}) \equiv P(X=x, Y=y)
+$$
+
+of the pair of discrete random vector $(X, Y)$, whose possible values are a (finite or countably infinite) set of points $\left(x_{j}, y_{k}\right)$ in the plane, where $p(x, y)$ has the following properties:
+
+(i) $p\left(x_{j}, y_{k}\right) \geqslant 0, \forall\left(x_{j}, y_{k}\right) \in \mathbb{R} \times \mathbb{R}$;
+
+(ii) $\sum_{j=1}^{\infty} \sum_{k=1}^{\infty} p\left(x_{j}, y_{k}\right)=1$.
+---
+3.9 The random variables $U$ and $V$ each take the values \pm 1 . Their joint distribution is given by
+
+`$$
+\begin{gathered}
+P(U=1)=P(U=-1)=\frac{1}{2} . \\
+P(V=1 \mid U=1)=\frac{1}{3}=P(V=-1 \mid U=-1), \\
+P(V=-1 \mid U=1)=\frac{2}{3}=P(V=1 \mid U=-1) .
+\end{gathered}
+$$`
+
+(a) Find the probability that $x^{2}+U x+V=0$ has at least one real root.
+
+(b) Find the expected value of the larger root given that there is at least one real root.
+
+(c) Find the probability that $x^{2}+(U+V) x+U+V=0$ has at least one real root.
+---
+Solution. 
+`$$
+\begin{aligned}
+& P(U=1, V=1)=P(V=1 \mid U=1) \cdot P(U=1) \\
+&=\frac{1}{3} \times \frac{1}{2}=\frac{1}{6} \\
+& P(U=1, V=-1)=P(V=-1 \mid U=1) \cdot P(U=1) \\
+&=\frac{2}{3} \times \frac{1}{2}=\frac{1}{3} \\
+& P(U=-1, V=1)=P(V=1 \mid U=-1) \cdot P(U=-1) \\
+&=\frac{2}{3} \times \frac{1}{2}=\frac{1}{3} \\
+& P(U=-1, V=-1)=P(V=-1 \mid(U=-1) \cdot P(U=-1) \\
+&=\frac{1}{3} \times \frac{1}{2}=\frac{1}{6}
+\end{aligned}
+$$`
+---
+(a) Since $\Delta=U^2-4 V \geqslant 0$, Then
+`$$
+\begin{aligned}
+P(U^2-4 V \geqslant 0)& =P(U^2 \geq 4 V)\\
+& =P(U=1, V=-1)+P(U=-1, V=-1) \\
+& =\frac{1}{2}
+\end{aligned}
+$$`
+---
+(b) When $U=1, V=-1$
+`$$
+x^2+U x+V=0 \Leftrightarrow x^2+x-1=0
+$$`
+Then $x_1=\frac{\sqrt{5}-1}{2} x_2: \frac{-\sqrt{5}-1}{2}$
+when $u=1, v=-1$
+`$$
+x^2+U x+V=0 \Leftrightarrow x^2-x-1: 0
+$$`
+Then $x_1=\frac{\sqrt{5}+1}{2} x_2=\frac{-\sqrt{5}+1}{2}$
+Then 
+`$$
+\begin{align}
+E\left(x_{\text {large }} \mid \Delta \geqslant 0\right)&=\frac{\frac{\sqrt{5}-1}{2} \times \frac{1}{3}+\frac{\sqrt{5}+1}{2} \times \frac{1}{6}}{\frac{1}{2}}\\&=\frac{3 \sqrt{5-1}}{6}\end{align}
+$$`
+---
+(C) Since
+`$$
+\begin{aligned}
+\Delta & =(u+v)^2-4(u+v) \\
+& =(u+v-c)(u+v) \geqslant 0
+\end{aligned}
+$$`
+Then
+`$$
+\begin{aligned}
+P(\Delta \geqslant 0) & =P(u=1, v=-1)+P(u=-1, v=1)+P(u=1, v=-1) \\
+& =\frac{1}{3}+\frac{1}{3}+\frac{1}{6} \\
+& =\frac{5}{6}
+\end{aligned}
+$$`
+---
+### Continuous Random Vectors
+
+Let $X$ and $Y$ be two continuous random variables. The random variables $X$ and $Y$ are called (jointly) continuous if the joint distribution function $F(x, y)$ can be expressed by the joint probability density function (joint p.d.f.) $f(x, y)$ as
+$$
+F(x, y)=\int_{-\infty}^{y} \int_{-\infty}^{x} f(u, v) d u d v
+$$
+The joint p.d.f. $f(x, y)$ has the following properties:
+
+(i) $f(x, y) \geqslant 0$ for any point $(x, y) \in \mathbb{R} \times \mathbb{R}$;
+
+(ii) $\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} f(x, y) d x d y=1$.
+
+Conversely, if a function $f(x, y)$ satisfies the two properties above, we can prove it must be a joint p.d.f. for some random vector $(X, Y)$.
+---
+The probability $P[(X, Y) \in A]$ is obtained by integrating the joint p.d.f. over the domain $A$, see Fig. 3.3:
+`$$
+P[(X, Y) \in A]=\iint_{(x, y) \in A} f(x, y) d x d y
+$$`
+
+![](https://pic-1307682807.cos.ap-beijing.myqcloud.com/2023_06_06_f26ecebb4939a04aad18g-09.jpg)
+---
+Example 3.1.8 Let $X$ and $Y$ have density
+$$
+f(x, y)= \begin{cases}8 x y & \text { if } 0<y<x<1 \\ 0 & \text { otherwise }\end{cases}
+$$
+Find $F(x, y)$.
+
+![](https://pic-1307682807.cos.ap-beijing.myqcloud.com/2023_06_06_f26ecebb4939a04aad18g-11.jpg)
+---
+Finally, for the points $A, B$ and $C$ in Fig. 3.5 satisfying $x \leqslant 0$ or $y \leqslant 0, F(x, y)=0$. For the points $D$ satisfying $0<y<x<1$ in Fig. 3.5,
+`$$
+F(x, y)=\int_{0}^{y} d v \int_{v}^{x} 8 u v d u=2 x^{2} y^{2}-y^{4}
+$$`
+
+
+For the points $E$ satisfying $0<x<1, y \geqslant x$ in Fig. 3.5,
+`$$
+F(x, y)=\int_{0}^{x} d u \int_{0}^{u} 8 u v d v=x^{4}
+$$`
+For the points $F$ satisfying $x \geqslant 1,0 \leqslant y<1$ in Fig. 3.5,
+`$$
+F(x, y)=\int_{0}^{y} d v \int_{v}^{1} 8 u v d u=2 y^{2}-y^{4} .
+$$`
+For the points $(x, y)$ satisfying $x>1, y \geqslant 1, F(x, y)=1$. 
+---
+As a result,
+`$$
+F(x, y)= \begin{cases}0 & \text { for } x \leqslant 0 \text { or } y \leqslant 0 \\ 2 x^{2} y^{2}-y^{4} & \text { for } 0<x<y<1, \\ x^{4} & \text { for } 0<x<1, y \geqslant x \\ 2 y^{2}-y^{4} & \text { for } x \geqslant 1,0 \leqslant y<1, \\ 1 & \text { for } x>1, y \geqslant 1 .\end{cases}
+$$`
+						</textarea>
+					</section>
 				</section>
 
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Conditional Distributions
+
+### Discrete case
+
+If $X$ and $Y$ are discrete random variables, then it is natural to define the conditional probability function of $X$ given that $Y=y$, by
+$$
+p_{X \mid Y}(x \mid y)=P(X=x \mid Y=y)=\frac{P(X=x, Y=y)}{P(Y=y)}=\frac{p(x, y)}{p_{Y}((y)}
+$$
+for all values of $y$ such that $p_{Y}(y)>0$.
+
+The conditional distribution function of $X$ given that $Y=y$ is defined, for all $y$ such that $p_{Y}(y)>0$, by
+$$
+F_{X \mid Y}(x, y)=P(X \leqslant x \mid Y=y)=\sum_{x_{i} \leqslant x} p_{X \mid Y}\left(x_{i} \mid y\right)
+$$
+---
+3.18 Suppose that two standard, fair dice are rolled and the sequence of scores $\left(X_{1}, X_{2}\right)$ is recorded. Let $U=\min \left\{X_{1}, X_{2}\right\}$ and $V=\max \left\{X_{1}, X_{2}\right\}$ denote the minimum and maximum scores, respectively.
+
+(a) Find the conditional density of $U$ given $V=v$ for each $v \in\{1,2,3,4,5,6\}$.
+
+(b) Find the conditional density of $V$ given $U=u$ for each $u \in\{1,2,3,4,5,6\}$.
+---
+Solution. let $U=u$ and $V=v$
+$u \leq v$
+when $u=v$
+Then $P(U=v \cdot v=v)=\frac{1}{6} \times \frac{1}{6}=\frac{1}{36}$
+when $u<v$
+Then $P(u=u, v: v)=2 \times \frac{1}{6} \times \frac{1}{6}=\frac{1}{18}$
+`$$
+\begin{align}
+&P(v=v)=\frac{1}{6} \times \frac{1}{6}+2 \times \frac{v-1}{6} \times \frac{r}{6}=\frac{2 v-1}{36}\\
+&P_{U \mid V}(u \mid v)=\frac{p(U=u, V=v)}{P(V= v)} \\
+& = \begin{cases}\frac{1}{2 v-1} &, u=v \\
+\frac{2}{2 v-1}&, u<v \\
+0 & ,\text { otherwise }\end{cases} \\
+\end{align}
+$$`
+
+`$$
+\begin{aligned}
+& P(U=u)=\frac{1}{6} \times \frac{1}{6}+2 \times \frac{6-u}{6} \times \frac{1}{6}=\frac{13-2 u}{36} \\
+& P_{V \mid U}(v \mid u)=\frac{P(U= u, U=v)}{P(U=u)} \\
+& =\left\{\begin{array}{cc}
+\frac{1}{r-2 u} &, u=v \\
+\frac{2}{3-2 u} &, u<v \\
+0&, \text { otherwise }
+\end{array}\right. \\
+\end{aligned}
+$$`
+---
+3.20 Suppose that $N$ has the Poisson distribution with parameter 1, and given $N=n, Y$ has the binomial distribution with parameters $n$ and p.
+
+(a) Find the joint probability density function of $(N, Y)$ ?
+
+(b) Find the probability density function of $Y$.
+
+(c) Find the conditional probability density function of $N$ given $Y=k$.
+---
+Solution. 
+`$$
+N \sim Poi(1) Y \sim B(n, p)\\
+P(N=n)=\frac{1}{e \cdot n !} \quad P(Y=y \mid N=n)=\left(\begin{array}{l}
+n \\
+y
+\end{array}\right) P^y(1-p)^{n-y}
+$$`
+(a)
+`$$
+\begin{aligned}
+p(n, y) & =P(X=x, Y=y) \\
+& =P(Y=y \mid N=n) \cdot P(N=n) \\
+& =\frac{1}{e \cdot n !} \cdot \frac{n !}{y !(n-y) !} \cdot P^y(1-p)^{n-y} \\
+& =\frac{1}{e \cdot y !(n-y) !} p^y(1-p)^{n-y}
+\end{aligned}
+$$`
+---
+(b)
+`$$
+\begin{aligned}
+p_Y(y) & =\sum_{n=0}^{+\infty} p(n, y) \\
+& =\frac{p^y}{e \cdot y!} \sum_{n=0}^{+\infty} \frac{(1-p)^{n-y}}{(n-y) !} \\
+& =\frac{p^y}{e \cdot y!} \cdot e^{1-p} \\
+& =\frac{p^y}{y !} \cdot e^{-p}
+\end{aligned}
+$$`
+---
+(C)
+`$$
+\begin{aligned}
+P(N=n \mid Y=k) & =\frac{P(N=n, Y=k)}{P(Y=k)} \\
+& =\frac{\frac{1}{e \cdot k ! \cdot(n-k) ! \cdot p^k \cdot(1-p)^{n-k}}}{\frac{p k}{k !} \cdot e^{-p}} \\
+& =\frac{(1-P)^{n-k} \cdot e^{p-1}}{(n-k) !}
+\end{aligned}
+$$`
+---
+### Continuous Case
+
+If $X$ and $Y$ have joint p.d.f. $f(x, y)$, then the conditional probability density function of $X$ given $Y=y$ is given by
+$$
+f_{X \mid Y}(x \mid y)= \begin{cases}\frac{f(x, y)}{f_{Y}(y)} & \text { if } 0<f_{Y}(y)<+\infty, \\ 0 & \text { elsewhere. }\end{cases}
+$$
+---
+3.25 Suppose that $X$ is uniformly distributed in the interval $(0,1)$, and that given $X=x$, $Y$ is uniformly distributed in the interval $(0, x)$.
+
+(a) Find the joint density of $(X, Y)$.
+
+(b) Find the probability density function of $Y$.
+
+(c) Find the conditional probability density function of $X$ given $Y=y$ for $y \in(0,1)$.
+---
+Solution.
+
+`$$
+\begin{aligned}
+& X \backsim U(0,1) \quad Y \backsim U(0, x) \\
+& f_x(x)=\left\{\begin{array}{l}
+1,0<x<1 \\
+0, \text { others }
+\end{array} \quad f_{Y \mid X}(y \mid x)=\left\{\begin{array}{l}
+\frac{1}{x}, 0 < y < x \\
+0, \text { others }
+\end{array}\right.\right.
+\end{aligned}
+$$`
+---
+(a)
+`$$
+\begin{aligned}
+f(x, y) & =f_x(x) \cdot f y \mid x(y \mid x) \\
+& =\left\{\begin{array}{l}
+\frac{1}{x}, y < x < 1 \\
+0, \text { others }
+\end{array}\right.
+\end{aligned}
+$$`
+---
+(b)
+`$$
+\begin{aligned}
+& f_Y(y)=\int_{-\infty}^{+\infty} f(x, y) d x \\
+&=\int_y^1 \frac{1}{x} d x \\
+&=\left\{\begin{array}{l}
+-lny ,0 <y<1 \\
+0 \text {, others }
+\end{array}\right.
+\end{aligned}
+$$`
+---
+(c)
+`$$
+\begin{aligned}
+& f_{X \mid Y}(x \mid y)=\frac{f(x, y)}{f_Y(y)} \\
+& =\left\{\begin{array}{l}
+-\frac{1}{x lny} ,0 <y<x<1 \\
+0 \text {, others }
+\end{array}\right.
+\end{aligned}
+$$`
+						</textarea>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Independence of Random Variables
+
+Given the joint probability (density) function of X*X* and Y*Y*, equations (3.4) and (3.5) yield the marginal probability (density) functions of X*X* and Y*Y*. However, to be given the marginal distributions does not in general uniquely determine a joint distribution. In this section, we will see only if X*X* and Y*Y* are independent, the joint distribution function could be obtained by the marginal distributions.
+---
+**Definition**
+
+Two random variables $X$ and $Y$ are said to be independent if for every pair of $x$ and $y$,
+$$
+F(x, y)=F_{X}(x) F_{Y}(y)
+$$
+We denote it by $X \perp Y$.
+
+Two random variables $X$ and $Y$ are said to be independent if for every pair of $x$ and $y$,
+$$
+\left\{\begin{aligned}
+p(x, y)=p_X(x) \cdot p_Y(y) & \text { when } X \text { and } Y \text { are discrete } \\
+& \text { or } \\
+f(x, y)=f_X(x) \cdot f_Y(y) & \text { when } X \text { and } Y \text { are continuous. }
+\end{aligned}\right.
+$$
+---
+**Theorem**
+
+Let $a, b, c$ and $d$ be given values such that $-\infty \leqslant a<b \leqslant+\infty$ and $-\infty \leqslant c<$ $d \leqslant+\infty$, and let $S$ be a rectangle in the xy-plane:
+`$$
+S=\{(x, y) \mid a \leqslant x \leqslant b \text { and } c \leqslant y \leqslant d\} 
+$$`
+Suppose that $f(x, y)=0$ for every point $(x, y)$ outside $S$. Then the continuous (discrete) random variables $X$ and $Y$ are independent if and only if their joint p.d.f. (or p.f.) can be expressed as
+$$
+f(x, y)=h(x) g(y)
+$$
+for all points in $S$.
+
+Let $X$ and $Y$ be two independent random variables. Then for any real functions $g(\cdot)$ and $h(\cdot), g(X)$ and $h(Y)$ are independent.
+---
+						</textarea>
+					</section>
+				</section>
+
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+
+## Conditional Distributions
+
+### Discrete case
+
+If $X$ and $Y$ are discrete random variables, then it is natural to define the conditional probability function of $X$ given that $Y=y$, by
+`$$
+p_{X \mid Y}(x \mid y)=P(X=x \mid Y=y)=\frac{P(X=x, Y=y)}{P(Y=y)}=\frac{p(x, y)}{p_{Y}((y)}
+$$`
+for all values of $y$ such that $p_{Y}(y)>0$.
+
+The conditional distribution function of $X$ given that $Y=y$ is defined, for all $y$ such that $p_{Y}(y)>0$, by
+`$$
+F_{X \mid Y}(x, y)=P(X \leqslant x \mid Y=y)=\sum_{x_{i} \leqslant x} p_{X \mid Y}\left(x_{i} \mid y\right)
+$$`
+---
+3.18 Suppose that two standard, fair dice are rolled and the sequence of scores $\left(X_{1}, X_{2}\right)$ is recorded. Let $U=\min \left\{X_{1}, X_{2}\right\}$ and $V=\max \left\{X_{1}, X_{2}\right\}$ denote the minimum and maximum scores, respectively.
+
+(a) Find the conditional density of $U$ given $V=v$ for each $v \in\{1,2,3,4,5,6\}$.
+
+(b) Find the conditional density of $V$ given $U=u$ for each $u \in\{1,2,3,4,5,6\}$.
+---
+Solution. let $U=u$ and $V=v$
+$u \leq v$
+when $u=v$
+Then $P(U=v \cdot v=v)=\frac{1}{6} \times \frac{1}{6}=\frac{1}{36}$
+when $u<v$
+Then $P(u=u, v: v)=2 \times \frac{1}{6} \times \frac{1}{6}=\frac{1}{18}$
+`$$
+\begin{align}
+&P(v=v)=\frac{1}{6} \times \frac{1}{6}+2 \times \frac{v-1}{6} \times \frac{r}{6}=\frac{2 v-1}{36}\\
+&P_{U \mid V}(u \mid v)=\frac{p(U=u, V=v)}{P(V= v)} \\
+& = \begin{cases}\frac{1}{2 v-1} &, u=v \\
+\frac{2}{2 v-1}&, u<v \\
+0 & ,\text { otherwise }\end{cases} \\
+\end{align}
+$$`
+
+`$$
+\begin{aligned}
+& P(U=u)=\frac{1}{6} \times \frac{1}{6}+2 \times \frac{6-u}{6} \times \frac{1}{6}=\frac{13-2 u}{36} \\
+& P_{V \mid U}(v \mid u)=\frac{P(U= u, U=v)}{P(U=u)} \\
+& =\left\{\begin{array}{cc}
+\frac{1}{r-2 u} &, u=v \\
+\frac{2}{3-2 u} &, u<v \\
+0&, \text { otherwise }
+\end{array}\right. \\
+\end{aligned}
+$$`
+---
+3.20 Suppose that $N$ has the Poisson distribution with parameter 1, and given $N=n, Y$ has the binomial distribution with parameters $n$ and p.
+
+(a) Find the joint probability density function of $(N, Y)$ ?
+
+(b) Find the probability density function of $Y$.
+
+(c) Find the conditional probability density function of $N$ given $Y=k$.
+---
+Solution. 
+`$$
+N \sim Poi(1) Y \sim B(n, p)\\
+P(N=n)=\frac{1}{e \cdot n !} \quad P(Y=y \mid N=n)=\left(\begin{array}{l}
+n \\
+y
+\end{array}\right) P^y(1-p)^{n-y}
+$$`
+(a)
+`$$
+\begin{aligned}
+p(n, y) & =P(X=x, Y=y) \\
+& =P(Y=y \mid N=n) \cdot P(N=n) \\
+& =\frac{1}{e \cdot n !} \cdot \frac{n !}{y !(n-y) !} \cdot P^y(1-p)^{n-y} \\
+& =\frac{1}{e \cdot y !(n-y) !} p^y(1-p)^{n-y}
+\end{aligned}
+$$`
+---
+(b)
+`$$
+\begin{aligned}
+p_Y(y) & =\sum_{n=0}^{+\infty} p(n, y) \\
+& =\frac{p^y}{e \cdot y!} \sum_{n=0}^{+\infty} \frac{(1-p)^{n-y}}{(n-y) !} \\
+& =\frac{p^y}{e \cdot y!} \cdot e^{1-p} \\
+& =\frac{p^y}{y !} \cdot e^{-p}
+\end{aligned}
+$$`
+---
+(C)
+`$$
+\begin{aligned}
+P(N=n \mid Y=k) & =\frac{P(N=n, Y=k)}{P(Y=k)} \\
+& =\frac{\frac{1}{e \cdot k ! \cdot(n-k) ! \cdot p^k \cdot(1-p)^{n-k}}}{\frac{p k}{k !} \cdot e^{-p}} \\
+& =\frac{(1-P)^{n-k} \cdot e^{p-1}}{(n-k) !}
+\end{aligned}
+$$`
+---
+### Continuous Case
+
+If $X$ and $Y$ have joint p.d.f. $f(x, y)$, then the conditional probability density function of $X$ given $Y=y$ is given by
+$$
+f_{X \mid Y}(x \mid y)= \begin{cases}\frac{f(x, y)}{f_{Y}(y)} & \text { if } 0<f_{Y}(y)<+\infty, \\ 0 & \text { elsewhere. }\end{cases}
+$$
+---
+3.25 Suppose that $X$ is uniformly distributed in the interval $(0,1)$, and that given $X=x$, $Y$ is uniformly distributed in the interval $(0, x)$.
+
+(a) Find the joint density of $(X, Y)$.
+
+(b) Find the probability density function of $Y$.
+
+(c) Find the conditional probability density function of $X$ given $Y=y$ for $y \in(0,1)$.
+---
+Solution.
+`$$
+\begin{aligned}
+& X \backsim U(0,1) \quad Y \backsim U(0, x) \\
+& f_x(x)=\left\{\begin{array}{l}
+1,0<x<1 \\
+0, \text { others }
+\end{array} \quad f_{Y \mid X}(y \mid x)=\left\{\begin{array}{l}
+\frac{1}{x}, 0 < y < x \\
+0, \text { others }
+\end{array}\right.\right.
+\end{aligned}
+$$`
+---
+(a)
+`$$
+\begin{aligned}
+f(x, y) & =f_x(x) \cdot f y \mid x(y \mid x) \\
+& =\left\{\begin{array}{l}
+\frac{1}{x}, y < x < 1 \\
+0, \text { others }
+\end{array}\right.
+\end{aligned}
+$$`
+---
+(b)
+`$$
+\begin{aligned}
+& f_Y(y)=\int_{-\infty}^{+\infty} f(x, y) d x \\
+&=\int_y^1 \frac{1}{x} d x \\
+&=\left\{\begin{array}{l}
+-lny ,0 <y<1 \\
+0 \text {, others }
+\end{array}\right.
+\end{aligned}
+$$`
+---
+(c)
+`$$
+\begin{aligned}
+& f_{X \mid Y}(x \mid y)=\frac{f(x, y)}{f_Y(y)} \\
+& =\left\{\begin{array}{l}
+-\frac{1}{x lny} ,0 <y<x<1 \\
+0 \text {, others }
+\end{array}\right.
+\end{aligned}
+$$`
+						</textarea>
+					</section>
+				</section>
+
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+## One Function of Two Random Variables
+
+### Discrete Case
+
+If $X$ and $Y$ are independent discrete random variables, then $X+Y$ has probability function
+`$$
+p_{X+Y}(n)=\sum_{k} p_{X}(k) p_{Y}(n-k)
+$$`
+The function $p_{X+Y}$ is called the convolution of $p_{X}$ and $p_{Y}$, and is written as
+`$$
+p_{X+Y}=p_{X} * p_{Y}
+$$`
+---
+Example 3.4.3 Let $X$ and $Y$ be independent geometric variables with common probability function
+`$$
+p(k)=p(1-p)^{k-1}, \quad k=1,2, \cdots
+$$`
+Determine the probability function of $X+Y$. 
+---
+Solution. Because the event $\{X+Y=n\}$ may be written as the union of the disjoint events $\{X=k, Y=n-k\}, 0 \leqslant k \leqslant n$, we have
+
+`$$
+\begin{aligned}
+P(X+Y=n) & =\sum_{k=1}^{n-1} P(X=k, Y=n-k) \\
+& =\sum_{k=1}^{n-1} P(X=k) P(Y=n-k) \\
+& =\sum_{k=1}^{n-1} p(1-p)^{k-1} p(1-p)^{n-k-1} \\
+& =(n-1) p^{2}(1-p)^{n-2}, \quad n=2,3, \cdots .
+\end{aligned}
+$$`
+Assume $X$ and $Y$ are independent, and $X \sim B\left(n_{1}, p\right), Y \sim B\left(n_{2}, p\right)$. $X+Y \sim B\left(n_{1}+n_{2}, p\right)$.
+
+Assume $X$ and $Y$ are independent, and $X \sim P(\lambda), Y \sim P(\mu)$. Prove $X+Y \sim$ $P(\lambda+\mu)$
+---
+### Continuous case
+
+Let $X$ and $Y$ be random variables having joint p.d.f. $f(x, y)$. Let $Z$ be given by $Z=\varphi(X, Y)$, where $\varphi$ is a real-valued function whose domain contains the range of $X$ and $Y$. In order to determine the p.d.f. of $Z$, we need to find the d.f. of $Z$ first. For a fixed $z \in \mathbb{R}$, the event $\{Z \leqslant z\}$ is equivalent to the event $\left\{(X, Y) \in A_{z}\right\}$, where $A_{z}$ is the subset of $\mathbb{R}^{2}$ defined by
+`$$
+A_{z}=\{(x, y) \mid \varphi(x, y) \leqslant z\}
+$$`
+---
+Thus
+`$$
+\begin{aligned}
+F_{Z}(z) & =P(Z \leqslant z)=P(\varphi(X, Y) \leqslant z) \\
+& =P\left((X, Y) \in A_{z}\right)=\iint_{A_{z}} f(x, y) d x d y .
+\end{aligned}
+$$`
+If we can find a nonnegative function $g$ such that
+`$$
+\iint_{A_{z}} f(x, y) d x d y=\int_{-\infty}^{z} g(v) d v, \quad-\infty<z<\infty,
+$$`
+then $g$ is necessary a density of $Z$.
+---
+1. The case of $X+Y$
+
+The density of $Z=X+Y$ is given by
+
+`$$
+f_{X+Y}(z)=\int_{-\infty}^{\infty} f(x, z-x) d x, \quad-\infty<z<\infty .
+$$`
+
+**If $X$ and $Y$ are independent**, then equation (3.16) can be rewritten as
+`$$
+f_{X+Y}(z)=\int_{-\infty}^{\infty} f_{X}(x) f_{Y}(z-x) d x, \quad-\infty<z<\infty
+$$`
+---
+That means the density of the sum of two independent random variables is the convolution of the individual densities. Equation (3.17) can be written as
+
+$$
+f_{X+Y}=f_{X} * f_{Y}
+$$
+
+**If $X$ and $Y$ are nonnegative independent random variables**, then $f_{X+Y}(z)=0$ for $z \leqslant 0$ and
+`$$
+f_{X+Y}(z)=\int_{0}^{z} f_{X}(x) f_{Y}(z-x) d x, \quad 0<z<\infty .
+$$`
+
+If $X \sim N\left(\mu_{1}, \sigma_{1}^{2}\right), Y \sim\left(\mu_{2}, \sigma_{2}^{2}\right)$ and $X \perp Y$, then
+
+`$$
+a X+b Y+c \sim N\left(a \mu_{1}+b \mu_{2}+c, a^{2} \sigma_{1}^{2}+b^{2} \sigma_{2}^{2}\right)
+$$`
+
+where $a, b$ are constants.
+---
+3.37 Suppose that $X, Y$ and $Z$ are independent and identically distributed random variables, and each has a standard normal distribution. Evaluate $P(3 X+2 Y<6 Z-7)$.
+---
+Solution.
+`$$
+\begin{aligned}
+& X, Y, Z \sim N(0,1) \\
+& P(3 X+2 Y<6 Z-7)=P(3 X+2 Y-6 Z<-7)=P(-3 x-2 Y+6 Z>7)
+\end{aligned}
+$$`
+Let $w=-3 x-2 y+6 z \sim N(0,49)$
+`$$
+\begin{aligned}
+P(3 x+2 y<6 z-7) & =P(-3 x-2 y+6 z>7) \\
+& =1-P(-3 x-2 y+6 z \leq 7) \\
+& =1-P(w \leq 7) \\
+& =1-P\left(\frac{w}{7} \leq \frac{7}{7}\right) \\
+& =1-\Phi(1) \\
+& =1-0.84124 \\
+& =0.15866
+\end{aligned}
+$$`
+---
+2. The case of $\max(X,Y)$
+
+For $Z=\max (X, Y)$, we have
+`$$
+\begin{aligned}
+F_{Z}(z) & =P(\max (X, Y) \leqslant z) \\
+& =P(\{X \leqslant z, X>Y\} \cup\{Y \leqslant z, X \leqslant Y\}) \\
+& =P(X \leqslant z, X>Y)+P(Y \leqslant z, X \leqslant Y) .
+\end{aligned}
+$$`
+
+Since $\{X>Y\}$ and $\{X \leqslant Y\}$ are mutually exclusive sets that form a partition,
+
+`$$
+F_{Z}(z)=P(X \leqslant z, Y \leqslant z)=F(z, z) .
+$$`
+
+**If $X$ and $Y$ are independent**, then
+`$$
+F_{Z}(z)=F_{X}(z) F_{Y}(z)
+$$`
+
+and hence
+---
+`$$
+f_{Z}(z)=F_{X}(z) f_{Y}(z)+f_{X}(z) F_{Y}(z) .
+$$`
+
+**If $X$ and $Y$ are independent and have identical distribution function $F$ and probability density function $f$**, then equation (3.19) becomes
+$$
+F_{Z}(z)=[F(z)]^{2}
+$$
+
+Equation (3.20) becomes
+
+$$
+f_{Z}(z)=2 F(z) f(z)
+$$
+---
+3. The case of $\min(X,Y)$
+
+For $W=\min (X, Y)$, we have
+
+`$$
+\begin{aligned}
+F_{W}(w) & =P(\min (X, Y) \leqslant w) \\
+& =P(\{Y \leqslant w, X>Y\} \cup\{X \leqslant w, X \leqslant Y\}) .
+\end{aligned}
+$$`
+
+Since the event $\{\min (X, Y) \leqslant w\}$ contains many cases, we consider its complement. Thus
+
+`$$
+\begin{aligned}
+F_{W}(w) & =1-P(\min (X, Y)>w)=1-P(X>w, Y>w) \\
+& =F_{X}(w)+F_{Y}(w)-F_{X, Y}(w, w) .
+\end{aligned}
+$$`
+---
+**If $X$ and $Y$ are independent**, then
+`$$
+F_{W}(w)=1-P(X>w) P(Y>w)=1-\left[1-F_{X}(w)\right]\left[1-F_{Y}(w)\right]
+$$`
+
+**If $X$ and $Y$ are independent and have the same distribution function $F$ and probability density function $f$**, then
+`$$
+F_{W}(w)=1-[1-F(w)]^{2}
+$$`
+
+And
+
+`$$
+f_{W}(w)=F_{W}^{\prime}(w)=2[1-F(w)] f(w)
+$$`
+---
+Example 3.4.10 Suppose that $X_{1} \sim \operatorname{Exp}(\alpha), X_{2} \sim \operatorname{Exp}(\beta)$ and $X_{1} \perp X_{2}$. Let $Z=\max (X, Y)$ and $W=\min (X, Y)$. Determine the distributions of $Z$ and $W$.
+---
+Solution. $\quad$ Since $X_{1} \sim \operatorname{Exp}(\alpha)$ and $X_{2} \sim \operatorname{Exp}(\beta)$,
+
+`$$
+F_{X}(x)=\left\{\begin{array}{ll}
+1-e^{-\alpha x} & \text { for } x>0, \\
+0 & \text { for } x \leqslant 0
+\end{array} \quad \text { and } \quad F_{Y}(y)= \begin{cases}1-e^{-\beta y} & \text { for } y>0, \\
+0 & \text { for } y \leqslant 0\end{cases}\right.
+$$`
+
+By using equation (3.19), we get
+
+`$$
+F_{Z}(z)=F_{X}(z) F_{Y}(z)= \begin{cases}\left(1-e^{-\alpha z}\right)\left(1-e^{-\beta z}\right) & \text { for } z>0 \\ 0 & \text { for } z \leqslant 0\end{cases}
+$$`
+---
+and hence
+
+`$$
+f_{Z}(z)= \begin{cases}\alpha e^{-\alpha z}+\beta e^{-\beta z}-(\alpha+\beta) e^{-(\alpha+\beta) z} & \text { for } z>0 \\ 0 & \text { for } z \leqslant 0\end{cases}
+$$`
+
+By using equation (3.23), we can obtain
+
+`$$
+F_{W}(w)=1-\left[1-F_{X}(w)\right]\left[1-F_{Y}(w)\right]= \begin{cases}1-e^{-(\alpha+\beta) w} & \text { for } w>0 \\ 0 & \text { for } w \leqslant 0\end{cases}
+$$`
+---
+and hence
+
+$$
+f_{W}(w)= \begin{cases}(\alpha+\beta) e^{-(\alpha+\beta) w} & \text { for } w>0 \\ 0 & \text { for } w \leqslant 0\end{cases}
+$$
+
+i.e., $W \sim \operatorname{Exp}(\alpha+\beta)$.
+						</textarea>
+					</section>
+				</section>
+
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Numerical Characteristics of Random Variables
+
+### Expectation of Sums and Products
+
+Suppose that $E(X)$ and $E(Y)$ are both finite. We have
+
+`$$
+E(X+Y)=E(X)+E(Y) .
+$$`
+
+Let $X$ and $Y$ be two independent random variables. Then
+
+`$$
+\operatorname{Var}(X+Y)=\operatorname{Var}(X)+\operatorname{Var}(Y)
+$$`
+---
+### Covariance and Correlation
+
+When two random variables $X$ and $Y$ are not independent, it is frequently of interest to assess how strongly they are related to one another. In section 3.6.1, we have
+
+`$$
+\operatorname{Var}(X+Y)=\operatorname{Var}(X)+\operatorname{Var}(Y)+2 E[(X-E(X))(Y-E(Y))]
+$$`
+
+Now we define the covariance of $X$ and $Y$ by the cross-product term.
+
+The covariance between two random variables $X$ and $Y$ is
+
+`$$
+\begin{aligned}
+& \operatorname{Cov}(X, Y)=E[(X-E(X))(Y-E(Y))] \\
+& = \begin{cases}\sum_{x} \sum_{y}(x-E(X))(y-E(Y)) \cdot p(x, y), & X, Y \text { discrete } \\
+\int_{-\infty}^{\infty} \int_{-\infty}^{\infty}(x-E(X))(y-E(Y)) \cdot f(x, y) d x d y, & X, Y \text { continuous }\end{cases}
+\end{aligned}
+$$`
+---
+Remark: This is the most important in the central joint moments, which are
+
+`$$
+\sigma_{i j}=E\left[(X-E(X))^{i}(Y-E(Y))^{j}\right], \quad i, j \geqslant 1
+$$`
+
+**The usual way** to calculate the value of covariance $\operatorname{Cov}(X, Y)$ is the following.
+`$$
+\begin{aligned}
+\operatorname{Cov}(X, Y) & =E[X Y-E(X) Y-X E(Y)+E(X) E(Y)] \\
+& =E(X Y)-E(X) E(Y)-E(X) E(Y)+E(X) E(Y) \\
+& =E(X Y)-E(X) E(Y)
+\end{aligned}
+$$`
+---
+For jointly distributed random variables $X$ and $Y$, and constants $a, b$, we have
+
+(i) $\operatorname{Cov}(X, Y)=\operatorname{Cov}(Y, X)$,
+
+(ii) $\operatorname{Cov}(X, X)=E\left(X^{2}\right)-[E(X)]^{2}=\operatorname{Var}(X)$,
+
+(iii) $\operatorname{Cov}(a X, b Y)=a b \operatorname{Cov}(X, Y)$,
+
+(iv) $\operatorname{Cov}(X+Y, Z)=\operatorname{Cov}(X, Z)+\operatorname{Cov}(Y, Z)$.
+
+The correlation coefficient of $X$ and $Y$, denoted by $\rho(X, Y), \rho_{X Y}$, or just $\rho$, is defined by
+
+`$$
+\rho(X, Y)=\frac{\operatorname{Cov}(X, Y)}{\sigma_{X} \cdot \sigma_{Y}}
+$$`
+
+where $\sigma_{X}$ and $\sigma_{Y}$ are standard deviation of $X$ and $Y$ respectively.
+---
+**The following statements are equivalent:**
+
+(i) $X$ and $Y$ are uncorrelated,
+
+(ii) $\operatorname{Cov}(X, Y)=0$,
+
+(iii) $E(X Y)=E(X) E(Y)$,
+
+(iv) $\operatorname{Var}(X+Y)=\operatorname{Var}(X)+\operatorname{Var}(Y)$.
+---
+3.41 Let $X$ be a random variable uniformly distributed in $[0, b]$. Compute $\operatorname{Cov}\left(X, X^2\right)$ and the correlation coefficient $\rho\left(X, X^2\right)$.
+
+`$$
+\begin{aligned}
+& X \sim U[0, b] \\
+& f(x)= \begin{cases}\frac{1}{b}, & 0 \leqslant x \leqslant b \\
+0, & \text { otherwise }\end{cases} \\
+& \operatorname{Cov}\left(x, x^2\right)=E\left(x \cdot x^2\right)-E(x) \cdot E\left(x^2\right) \\
+& \operatorname{Var}(x)=E\left(x^2\right)-E^2(x) \Rightarrow E\left(x^2\right)=\operatorname{Var}(x)+E^2(x)=\frac{b^2}{12}+\left(\frac{b}{2}\right)^2=\frac{1}{3} b^2 \\
+& E\left(x^3\right)=\int_{-\infty}^{\infty} x^3 f(x) d x=\int_0^b x^3 \cdot \frac{1}{b} d x=\frac{1}{4} b^3 \\
+& \Rightarrow \operatorname{Cov}\left(x, x^2\right)=\frac{1}{4} b^3-\frac{b}{2} \cdot \frac{1}{3} b^2=\frac{1}{12} b^3 \\
+\end{aligned}
+$$`
+---
+`$$
+\begin{aligned}
+& \rho\left(x, x^2\right)=\frac{\operatorname{Con}\left(x, x^2\right)}{\sqrt{\operatorname{Var}(x)} \cdot \sqrt{\operatorname{Var}\left(x^2\right)}} \\
+& \operatorname{Var}(x)=\frac{b^2}{12} \\
+& \operatorname{Var}\left(x^2\right)=E\left(x^4\right)-E^2\left(x^2\right) \\
+& E\left(x^4\right)=\int_{-\infty}^{\infty} x^4 f(x) d x=\int_0^b x^4 \cdot \frac{1}{b} d x=\frac{1}{5} b^4 \\
+& \operatorname{Var}\left(x^2\right)=\frac{1}{5} b^4-\frac{1}{9} b^4=\frac{4}{45} b^4 \\
+& \Rightarrow P\left(x, x^2\right)=\frac{\frac{1}{12} A^3}{\frac{x}{2 \sqrt{3}} \cdot \frac{2 A^2}{\sqrt{45}}}=\frac{\sqrt{15}}{4} \\
+\end{aligned}
+$$`
+						</textarea>
+					</section>
+				</section>
 			</div>
 		</div>
 
